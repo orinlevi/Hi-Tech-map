@@ -1,0 +1,113 @@
+site_name: Hi-Tech Map
+site_description: מפה מובנית של עולם ההייטק - אלגוריתמיקה, למידת מכונה, רשתות, מערכות, אבטחה ונתונים
+docs_dir: docs
+site_url: https://orinlevi.github.io/hi_tech_map/
+
+repo_name: hi_tech_map
+repo_url: https://github.com/orinlevi/hi_tech_map
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/orinlevi/hi_tech_map
+
+theme:
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  name: material
+  custom_dir: overrides
+  language: he
+  direction: rtl
+  palette:
+    - scheme: slate
+      media: "(min-width: 0)"
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: מצב יום
+    - scheme: default
+      media: "(prefers-color-scheme: light)"
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: מצב לילה
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search:
+      lang: he
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - admonition
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - בית: README.md
+  - תמונה גדולה:
+    - AI, ML & DL: notes/00-big-picture/ai-ml-dl.md
+    - מפת תפקידים: notes/00-big-picture/roles-map.md
+    - פרודקשן: notes/00-big-picture/production.md
+  - אלגוריתמיקה:
+    - מהי אלגוריתמיקה: notes/01-algorithmics/what-is-algorithmics.md
+    - סיבוכיות: notes/01-algorithmics/complexity.md
+    - למה מבני נתונים: notes/01-algorithmics/data-structures-why.md
+    - מקבילי מול סדרתי: notes/01-algorithmics/parallel-vs-serial.md
+    - אלגוריתמים ב-ML: notes/01-algorithmics/algorithms-in-ml.md
+  - ליבת ML:
+    - וקטורים ומרחבים: notes/02-ml-core/vectors-and-spaces.md
+    - סיווג: notes/02-ml-core/classification.md
+    - Loss & Softmax: notes/02-ml-core/loss-softmax.md
+    - רשתות נוירונים: notes/02-ml-core/neural-networks.md
+    - Transformers: notes/02-ml-core/transformers.md
+    - Diffusion: notes/02-ml-core/diffusion.md
+  - רשתות:
+    - Client-Server: notes/03-networks/client-server.md
+    - 7 שכבות OSI: notes/03-networks/osi-7-layers.md
+    - TCP/IP & HTTP: notes/03-networks/tcp-ip-http.md
+    - DNS & Ports: notes/03-networks/dns-ports.md
+    - למה ל-Backend צריך רשתות: notes/03-networks/why-backend-needs-networking.md
+  - מערכות:
+    - מחשב מול שרת: notes/04-systems/computer-vs-server.md
+    - יסודות חומרה: notes/04-systems/hardware-basics.md
+    - CPU מול GPU: notes/04-systems/cpu-vs-gpu.md
+    - מאיצים - FPGA & TPU: notes/04-systems/accelerators-fpga-tpu.md
+    - Docker: notes/04-systems/docker.md
+    - Kubernetes: notes/04-systems/kubernetes.md
+    - OpenShift: notes/04-systems/openshift.md
+    - CI/CD: notes/04-systems/ci-cd.md
+  - אבטחה:
+    - Credentials: notes/05-security/credentials.md
+    - Sandbox: notes/05-security/sandbox.md
+    - Red, Blue & Purple: notes/05-security/red-blue-purple.md
+    - MITRE ATT&CK: notes/05-security/mitre-attck.md
+    - אבטחה ו-ML: notes/05-security/security-and-ml.md
+  - נתונים:
+    - מהו מסד נתונים: notes/06-data/what-is-a-database.md
+    - Relational מול NoSQL: notes/06-data/relational-vs-nosql.md
+    - סכמות ומודלים: notes/06-data/schemas-and-models.md
+    - שאילתות ואינדקסים: notes/06-data/queries-and-indexes.md
+    - DB ו-ML: notes/06-data/db-and-ml.md
