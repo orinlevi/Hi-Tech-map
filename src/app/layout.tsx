@@ -17,11 +17,11 @@ export const metadata: Metadata = {
     template: "%s | מפת הייטק",
   },
   description: "מפת ידע מקיפה לעולם ההייטק — ML, אלגוריתמיקה, רשתות, מערכות, אבטחה ונתונים",
-  metadataBase: new URL("https://orinlevi.github.io/hi_tech_map"),
+  metadataBase: new URL("https://orinlevi.github.io/Hi-Tech-map"),
   openGraph: {
     title: "מפת הייטק | Hi-Tech Map",
     description: "מפת ידע מקיפה לעולם ההייטק",
-    url: "https://orinlevi.github.io/hi_tech_map",
+    url: "https://orinlevi.github.io/Hi-Tech-map",
     siteName: "מפת הייטק",
     locale: "he_IL",
     type: "website",

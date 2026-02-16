@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/hi_tech_map",
+  basePath: "/Hi-Tech-map",
   images: { unoptimized: true },
   serverExternalPackages: ["katex"],
 };

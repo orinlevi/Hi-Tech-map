@@ -40,7 +40,7 @@ function rewriteLinks(
           fileToSlug.get(filename);
 
         if (slug) {
-          return `[${text}](/hi_tech_map/${slug})`;
+          return `[${text}](/Hi-Tech-map/${slug})`;
         }
 
         return text;

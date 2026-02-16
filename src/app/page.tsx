@@ -50,7 +50,7 @@ export default function HomePage() {
                 {section.units.map((unit) => (
                   <li key={unit.slug}>
                     <Link
-                      href={`/hi_tech_map/${unit.slug}`}
+                      href={`/${unit.slug}`}
                       className="text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 transition-colors"
                     >
                       {unit.title}

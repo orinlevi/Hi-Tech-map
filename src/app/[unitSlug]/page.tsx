@@ -39,7 +39,7 @@ export default async function UnitPage({ params }: { params: Promise<{ unitSlug:
     <div className="max-w-7xl mx-auto px-4 py-6">
       {/* Breadcrumbs */}
       <nav className="text-sm text-gray-500 dark:text-gray-400 mb-4 flex items-center gap-1.5">
-        <Link href="/hi_tech_map" className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
+        <Link href="/" className="hover:text-gray-700 dark:hover:text-gray-200 transition-colors">
           מפת הייטק
         </Link>
         <span className="text-gray-300 dark:text-gray-600">/</span>
@@ -57,7 +57,7 @@ export default async function UnitPage({ params }: { params: Promise<{ unitSlug:
           <nav className="flex justify-between items-center mt-12 pt-6 border-t border-gray-200 dark:border-gray-800">
             {prev ? (
               <Link
-                href={`/hi_tech_map/${prev.slug}`}
+                href={`/${prev.slug}`}
                 className="text-sm text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
               >
                 → {prev.title}
@@ -65,7 +65,7 @@ export default async function UnitPage({ params }: { params: Promise<{ unitSlug:
             ) : <span />}
             {next ? (
               <Link
-                href={`/hi_tech_map/${next.slug}`}
+                href={`/${next.slug}`}
                 className="text-sm text-teal-600 dark:text-teal-400 hover:text-teal-700 dark:hover:text-teal-300 transition-colors"
               >
                 {next.title} ←
