@@ -1,0 +1,97 @@
+{
+  "sections": [
+    {
+      "id": "00-big-picture",
+      "title": "תמונה גדולה",
+      "emoji": "🌍",
+      "color": "teal",
+      "units": [
+        { "slug": "ai-ml-dl", "file": "00-big-picture/ai-ml-dl.md", "title": "AI, ML & DL" },
+        { "slug": "roles-map", "file": "00-big-picture/roles-map.md", "title": "מפת תפקידים" },
+        { "slug": "production", "file": "00-big-picture/production.md", "title": "פרודקשן" }
+      ]
+    },
+    {
+      "id": "01-algorithmics",
+      "title": "אלגוריתמיקה",
+      "emoji": "⚡",
+      "color": "cyan",
+      "units": [
+        { "slug": "what-is-algorithmics", "file": "01-algorithmics/what-is-algorithmics.md", "title": "מהי אלגוריתמיקה" },
+        { "slug": "complexity", "file": "01-algorithmics/complexity.md", "title": "סיבוכיות (Complexity)" },
+        { "slug": "data-structures-why", "file": "01-algorithmics/data-structures-why.md", "title": "מבני נתונים — למה?" },
+        { "slug": "parallel-vs-serial", "file": "01-algorithmics/parallel-vs-serial.md", "title": "סדרתי מול מקבילי" },
+        { "slug": "algorithms-in-ml", "file": "01-algorithmics/algorithms-in-ml.md", "title": "אלגוריתמים ב-ML" }
+      ]
+    },
+    {
+      "id": "02-ml-core",
+      "title": "ליבת ML",
+      "emoji": "🧠",
+      "color": "emerald",
+      "units": [
+        { "slug": "vectors-and-spaces", "file": "02-ml-core/vectors-and-spaces.md", "title": "וקטורים ומרחבים" },
+        { "slug": "classification", "file": "02-ml-core/classification.md", "title": "סיווג (Classification)" },
+        { "slug": "loss-softmax", "file": "02-ml-core/loss-softmax.md", "title": "Loss & Softmax" },
+        { "slug": "neural-networks", "file": "02-ml-core/neural-networks.md", "title": "רשתות נוירונים" },
+        { "slug": "transformers", "file": "02-ml-core/transformers.md", "title": "Transformers" },
+        { "slug": "diffusion", "file": "02-ml-core/diffusion.md", "title": "Diffusion" }
+      ]
+    },
+    {
+      "id": "03-networks",
+      "title": "רשתות ותקשורת",
+      "emoji": "🌐",
+      "color": "blue",
+      "units": [
+        { "slug": "client-server", "file": "03-networks/client-server.md", "title": "Client-Server" },
+        { "slug": "osi-7-layers", "file": "03-networks/osi-7-layers.md", "title": "7 שכבות OSI" },
+        { "slug": "tcp-ip-http", "file": "03-networks/tcp-ip-http.md", "title": "TCP/IP & HTTP" },
+        { "slug": "dns-ports", "file": "03-networks/dns-ports.md", "title": "DNS & Ports" },
+        { "slug": "why-backend-needs-networking", "file": "03-networks/why-backend-needs-networking.md", "title": "למה Backend צריך רשתות" }
+      ]
+    },
+    {
+      "id": "04-systems",
+      "title": "מערכות ותשתיות",
+      "emoji": "🖥️",
+      "color": "purple",
+      "units": [
+        { "slug": "computer-vs-server", "file": "04-systems/computer-vs-server.md", "title": "מחשב מול שרת" },
+        { "slug": "hardware-basics", "file": "04-systems/hardware-basics.md", "title": "יסודות חומרה" },
+        { "slug": "cpu-vs-gpu", "file": "04-systems/cpu-vs-gpu.md", "title": "CPU vs GPU" },
+        { "slug": "accelerators-fpga-tpu", "file": "04-systems/accelerators-fpga-tpu.md", "title": "FPGA & TPU" },
+        { "slug": "docker", "file": "04-systems/docker.md", "title": "Docker" },
+        { "slug": "kubernetes", "file": "04-systems/kubernetes.md", "title": "Kubernetes" },
+        { "slug": "openshift", "file": "04-systems/openshift.md", "title": "OpenShift" },
+        { "slug": "ci-cd", "file": "04-systems/ci-cd.md", "title": "CI/CD" }
+      ]
+    },
+    {
+      "id": "05-security",
+      "title": "אבטחת מידע",
+      "emoji": "🔒",
+      "color": "amber",
+      "units": [
+        { "slug": "credentials", "file": "05-security/credentials.md", "title": "Credentials" },
+        { "slug": "sandbox", "file": "05-security/sandbox.md", "title": "Sandbox" },
+        { "slug": "red-blue-purple", "file": "05-security/red-blue-purple.md", "title": "Red, Blue & Purple Teams" },
+        { "slug": "mitre-attck", "file": "05-security/mitre-attck.md", "title": "MITRE ATT&CK" },
+        { "slug": "security-and-ml", "file": "05-security/security-and-ml.md", "title": "אבטחה ו-ML" }
+      ]
+    },
+    {
+      "id": "06-data",
+      "title": "נתונים ומסדי נתונים",
+      "emoji": "🗄️",
+      "color": "rose",
+      "units": [
+        { "slug": "what-is-a-database", "file": "06-data/what-is-a-database.md", "title": "מהו מסד נתונים" },
+        { "slug": "relational-vs-nosql", "file": "06-data/relational-vs-nosql.md", "title": "Relational מול NoSQL" },
+        { "slug": "schemas-and-models", "file": "06-data/schemas-and-models.md", "title": "סכמות ומודלים" },
+        { "slug": "queries-and-indexes", "file": "06-data/queries-and-indexes.md", "title": "שאילתות ואינדקסים" },
+        { "slug": "db-and-ml", "file": "06-data/db-and-ml.md", "title": "Databases ו-ML" }
+      ]
+    }
+  ]
+}

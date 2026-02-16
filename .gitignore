@@ -1,4 +1,4 @@
-site/
-__pycache__/
-*.pyc
+node_modules/
+.next/
+out/
 .DS_Store
