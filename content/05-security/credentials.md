@@ -306,6 +306,31 @@ pass: MyDog2020!  →    pass: MyDog2020!
 └──────────────────────────────────────────────────────┘
 ```
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אבטחת מידע — authentication, authorization, cryptographic protocols
+    - קריפטוגרפיה — hashing, digital signatures, key exchange
+
+    **קורסים מומלצים:**
+    - רשתות מחשבים — TLS, HTTPS, certificate management
+    - הנדסת תוכנה — secure coding practices, secrets management
+
+    **ידע מעשי:**
+    - bcrypt / Argon2 — password hashing
+    - JWT — token structure and validation
+    - OAuth 2.0 / OIDC — authentication flows
+    - HashiCorp Vault — secrets management
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא לאבטחת מידע (0368-3065)
+    - מבוא לקריפטוגרפיה מודרנית (0368-3049)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```text

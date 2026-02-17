@@ -265,6 +265,31 @@ finally:
     "SELECT * FROM users WHERE name = %s", (user_input,)
     ```
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מסדי נתונים — SQL, ACID, relational model
+    - מבני נתונים — trees, hash tables, storage structures
+
+    **קורסים מומלצים:**
+    - מערכות הפעלה — file systems, concurrency, transactions
+    - אלגוריתמים — searching, sorting, complexity
+
+    **ידע מעשי:**
+    - SQLite / PostgreSQL — hands-on database operations
+    - Python + psycopg2 / SQLAlchemy — database connectivity
+    - SQL fundamentals — CREATE, INSERT, SELECT, JOIN
+    - EXPLAIN ANALYZE — query performance analysis
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא למדעי הנתונים (0300-0300)
+    - מבני נתונים (0368-2158)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```

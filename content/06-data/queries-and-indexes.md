@@ -242,6 +242,10 @@ SELECT * FROM logs WHERE user_id = 42;
     - PostgreSQL / MySQL — index types, configuration
     - pgAdmin / DataGrip — DB management tools
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא למדעי הנתונים (0300-0300)
+    - אלגוריתמים (0368-2160)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

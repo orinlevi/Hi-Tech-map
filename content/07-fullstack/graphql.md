@@ -102,6 +102,29 @@ const postLoader = new DataLoader(async (userIds) => {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — API design, query languages, software project
+
+    **קורסים מומלצים:**
+    - מסדי נתונים — query optimization, N+1 problem
+    - אלגוריתמים — graph traversal, batching strategies
+
+    **ידע מעשי:**
+    - GraphQL — schema, queries, mutations, subscriptions
+    - Apollo Server/Client — full-stack GraphQL
+    - DataLoader — batching and caching
+    - Prisma — database integration with GraphQL
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **REST** — קודם תבינו REST היטב

@@ -204,6 +204,9 @@ curl -X POST https://httpbin.org/post \
     - Postman / Insomnia — API testing
     - nginx / Apache — web server configuration
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - רשתות תקשורת מחשבים (0368-3030)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

@@ -583,6 +583,14 @@ class MLRedTeamPipeline:
 - **Offensive ML Playbook** -- אוסף טכניקות עם דוגמאות
 - **SEC 595: Applied Data Science and AI/ML for Cybersecurity** -- קורס SANS מצוין
 
+!!! tip "לימוד אקדמי"
+    **קורסים**: למידת מכונה, אבטחת מידע, רשתות מחשבים, מערכות הפעלה.
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+
+    - מבוא ללמידה חישובית (0368-3235)
+    - מבוא לאבטחת מידע (0368-3065)
+
 ## שאלות לראיון עבודה
 
 ??? question "מה ההבדל בין Dumb Fuzzing ל-ML-Guided Fuzzing?"

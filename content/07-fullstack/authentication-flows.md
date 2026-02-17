@@ -77,6 +77,31 @@ App → Google API: "GET /userinfo" + Bearer token
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אבטחת מידע — authentication, authorization, cryptographic protocols
+    - קריפטוגרפיה — HMAC, hashing, digital signatures, TLS
+
+    **קורסים מומלצים:**
+    - רשתות מחשבים — HTTP, cookies, TLS handshake
+    - הנדסת תוכנה — secure coding, session management
+
+    **ידע מעשי:**
+    - JWT — token creation, validation, refresh flows
+    - OAuth 2.0 — authorization code flow, PKCE
+    - Sessions — express-session, Redis store
+    - NextAuth.js / Passport.js — authentication libraries
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא לאבטחת מידע (0368-3065)
+    - מבוא לקריפטוגרפיה מודרנית (0368-3049)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **HTTP basics** — cookies, headers, HTTPS

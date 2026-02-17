@@ -74,6 +74,31 @@ Response:
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — API design patterns, software architecture
+    - רשתות מחשבים — HTTP protocol, request/response model
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — REST principles, microservices
+    - מסדי נתונים — CRUD operations, query optimization
+
+    **ידע מעשי:**
+    - REST principles — resources, methods, status codes
+    - OpenAPI / Swagger — API documentation
+    - Postman — API testing and debugging
+    - Zod / Joi — request validation
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+    - רשתות תקשורת מחשבים (0368-3030)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **HTTP** — methods, status codes, headers

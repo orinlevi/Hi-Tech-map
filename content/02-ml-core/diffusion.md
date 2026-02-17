@@ -227,6 +227,11 @@ print(f"t=50 (noise):    mean={trajectory[50].mean():.2f}, std={trajectory[50].s
     - Stable Diffusion / DALL-E architectures
     - Weights & Biases — experiment tracking
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - יסודות הלמידה העמוקה (0368-3080)
+    - מבוא ללמידה חישובית (0368-3235)
+    - הסתברות וסטטיסטיקה לדו-חוגי (0368-2002)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

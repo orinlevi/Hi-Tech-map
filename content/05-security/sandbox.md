@@ -313,6 +313,31 @@ docker run --security-opt seccomp=profile.json my-app
 ??? tip "למה Seccomp חשוב?"
     Linux Kernel חושף מאות System Calls. רוב האפליקציות משתמשות רק בעשרות מהם. seccomp מאפשר לחסום את כל ה-syscalls שהאפליקציה לא צריכה — כך שגם אם תוקף מריץ קוד בתוך ה-Container, הוא מוגבל ביכולת לתקשר עם ה-Kernel.
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות הפעלה — processes, namespaces, cgroups, security mechanisms
+    - אבטחת מידע — isolation, defense in depth, privilege escalation
+
+    **קורסים מומלצים:**
+    - ארכיטקטורת מחשבים — hardware-level isolation, virtualization
+    - רשתות מחשבים — network isolation, firewalls
+
+    **ידע מעשי:**
+    - Docker — container security, non-root users, seccomp profiles
+    - Linux security — namespaces, cgroups, capabilities
+    - gVisor / Firecracker — advanced sandboxing
+    - Falco — runtime security monitoring
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מערכות הפעלה (0368-2162)
+    - מבוא לאבטחת מידע (0368-3065)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```text

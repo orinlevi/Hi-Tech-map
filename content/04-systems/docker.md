@@ -244,6 +244,9 @@ curl http://localhost:8080
     - Docker Hub / GitHub Container Registry
     - Docker networking, volumes, secrets
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מערכות הפעלה (0368-2162)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

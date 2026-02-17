@@ -394,6 +394,30 @@ db.products.insertMany([
 // אין NULLs! כל מסמך עם השדות הרלוונטיים לו 🎯
 ```
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מסדי נתונים — relational model, SQL, normalization, CAP theorem
+    - מבני נתונים — B-trees, hash tables, graphs
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — distributed databases, consistency models
+    - אלגוריתמים — searching, sorting, graph algorithms
+
+    **ידע מעשי:**
+    - PostgreSQL — relational queries, JSONB, indexes
+    - MongoDB — document model, aggregation pipeline
+    - Redis — caching, key-value operations
+    - CAP Theorem — understanding trade-offs
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא למדעי הנתונים (0300-0300)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```

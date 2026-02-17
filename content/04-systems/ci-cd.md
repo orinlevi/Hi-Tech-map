@@ -361,6 +361,9 @@ Status: All checks passed ✅
     - Terraform / Ansible — Infrastructure as Code
     - Testing frameworks (Jest, pytest, etc.)
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

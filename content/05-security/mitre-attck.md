@@ -165,6 +165,10 @@ Exfiltration        │ Exfil Over C2 Channel  │ T1041
     - Sigma rules — detection-as-code
     - Splunk / Elastic SIEM — log analysis
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא לאבטחת מידע (0368-3065)
+    - רשתות תקשורת מחשבים (0368-3030)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

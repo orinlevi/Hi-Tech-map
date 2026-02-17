@@ -11,13 +11,20 @@ import {
 } from "@/lib/remark-mkdocs";
 import { buildFileToSlugMap } from "@/lib/content";
 
+/** Default link prefix — matches basePath in next.config.ts */
+const DEFAULT_LINK_PREFIX = "/Hi-Tech-map";
+
 interface MarkdownRendererProps {
   content: string;
+  /** Prefix for internal links, e.g. "/Hi-Tech-map" or "/course/hi-tech-map".
+   *  When merging into orin-summaries, change to "/course/{courseId}". */
+  linkPrefix?: string;
 }
 
 function rewriteLinks(
   markdown: string,
-  fileToSlug: Map<string, string>
+  fileToSlug: Map<string, string>,
+  linkPrefix: string
 ): string {
   return markdown.replace(
     /\[([^\]]*)\]\(([^)]+)\)/g,
@@ -40,7 +47,7 @@ function rewriteLinks(
           fileToSlug.get(filename);
 
         if (slug) {
-          return `[${text}](/Hi-Tech-map/${slug})`;
+          return `[${text}](${linkPrefix}/${slug})`;
         }
 
         return text;
@@ -60,13 +67,16 @@ function rewriteLinks(
   );
 }
 
-export function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export function MarkdownRenderer({
+  content,
+  linkPrefix = DEFAULT_LINK_PREFIX,
+}: MarkdownRendererProps) {
   let processed = content;
   processed = preprocessMkdocsAdmonitions(processed);
   processed = preprocessMathFixup(processed);
 
   const fileToSlug = buildFileToSlugMap();
-  processed = rewriteLinks(processed, fileToSlug);
+  processed = rewriteLinks(processed, fileToSlug, linkPrefix);
 
   return (
     <article className="prose dark:prose-invert max-w-none" dir="rtl">

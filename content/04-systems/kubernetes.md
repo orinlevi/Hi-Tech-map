@@ -320,6 +320,10 @@ kubectl get pods
     - minikube / kind — local K8s development
     - Lens / k9s — UI tools
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מערכות הפעלה (0368-2162)
+    - רשתות תקשורת מחשבים (0368-3030)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

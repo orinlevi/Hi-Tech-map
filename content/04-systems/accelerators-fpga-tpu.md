@@ -188,6 +188,10 @@ TPU משתלם כשמנצלים את כל ה-throughput שלו
     - TensorFlow (TPU support) / JAX
     - Cloud accelerators (AWS Inferentia, Google TPU)
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבנה מחשבים (0368-2159)
+    - נושאים מתקדמים בארכיטקטורת מחשבים (0368-3087)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

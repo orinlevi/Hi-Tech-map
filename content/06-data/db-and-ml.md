@@ -232,6 +232,10 @@ print(results["documents"])
     - Feature stores (Feast, Tecton)
     - MLflow / Kubeflow — ML pipelines
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא למדעי הנתונים (0300-0300)
+    - מבוא ללמידה חישובית (0368-3235)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

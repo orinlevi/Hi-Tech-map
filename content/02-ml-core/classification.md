@@ -329,6 +329,33 @@ for name, model in models.items():
 !!! quote "על Iris Dataset, כמעט הכל עובד"
     אם המודל שלכם לא מגיע ל-95%+ על Iris, כנראה שיש באג בקוד. זה כמו מבחן נהיגה -- אם נכשלתם, הבעיה היא לא בכביש.
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הסתברות וסטטיסטיקה — distributions, hypothesis testing, Bayes
+    - למידת מכונה — classification algorithms, evaluation metrics
+    - אלגברה לינארית — hyperplanes, linear separability
+
+    **קורסים מומלצים:**
+    - אופטימיזציה — convex optimization, SVM formulation
+    - תורת המידע — entropy, information gain
+    - מודלים חישוביים בפסיכולוגיה — decision models, signal detection
+
+    **ידע מעשי:**
+    - Python + scikit-learn — classifiers, metrics, cross-validation
+    - Pandas — data manipulation, feature engineering
+    - Matplotlib / Seaborn — visualization of decision boundaries
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא ללמידה חישובית (0368-3235)
+    - הסתברות וסטטיסטיקה לדו-חוגי (0368-2002)
+    - מודלים חישוביים בפסיכולוגיה (1071-2337)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **הבינו את המושגים** -- ודאו שאתם מבינים Binary vs Multi-class, ואת Confusion Matrix (TP, FP, TN, FN).

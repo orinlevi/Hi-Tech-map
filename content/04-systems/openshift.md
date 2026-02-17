@@ -267,6 +267,9 @@ curl http://flask-app-my-web-project.apps.cluster.com
     - Red Hat Developer Sandbox — free OpenShift
     - Helm + Operators
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מערכות הפעלה (0368-2162)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

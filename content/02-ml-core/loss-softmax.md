@@ -322,6 +322,34 @@ for epoch in range(100):
 !!! warning "nn.CrossEntropyLoss כולל Softmax!"
     ב-PyTorch, `nn.CrossEntropyLoss` מקבל **logits** (לא הסתברויות). הוא מחשב Softmax + Cross-Entropy בפנים באופן יעיל ומספרית יציב. **אל תעבירו את הפלט דרך Softmax לפני CrossEntropyLoss** -- זה כפל Softmax!
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - חדו"א — נגזרות, Chain Rule, gradient
+    - הסתברות וסטטיסטיקה — MLE, distributions, cross-entropy
+    - אלגברה לינארית — matrix calculus, vector derivatives
+    - למידת מכונה — optimization, loss functions, regularization
+
+    **קורסים מומלצים:**
+    - אופטימיזציה — convex optimization, SGD variants, convergence
+    - תורת המידע — entropy, KL divergence, information theory
+
+    **ידע מעשי:**
+    - Python + NumPy — manual gradient computation
+    - PyTorch — autograd, loss functions, optimizers
+    - Experiment tracking — Weights & Biases, TensorBoard
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא ללמידה חישובית (0368-3235)
+    - חשבון דיפרנציאלי ואינטגרלי 1ב (0366-1121)
+    - חשבון דיפרנציאלי ואינטגרלי 2ב (0366-1122)
+    - הסתברות וסטטיסטיקה לדו-חוגי (0368-2002)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **הבינו את MSE** -- ממשו MSE ידנית ב-NumPy. חשבו את הנגזרת שלו ידנית ($\frac{\partial}{\partial \hat{y}} = 2(\hat{y} - y)$).

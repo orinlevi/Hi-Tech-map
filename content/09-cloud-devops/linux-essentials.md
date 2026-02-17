@@ -84,6 +84,10 @@ scp file.txt user@server:/path/   # copy file to server
     **קורסים חובה**: מערכות הפעלה (processes, filesystem, permissions, kernel).
     **ידע מעשי**: OverTheWire Bandit (CTF ללימוד Linux), LinuxCommand.org.
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+
+    - מערכות הפעלה (0368-2162)
+
 ---
 
 ## 💼 שאלות לראיון עבודה

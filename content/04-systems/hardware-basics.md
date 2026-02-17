@@ -359,6 +359,27 @@ top -bn1 | head -5
 # במקום שרת אחד חזק, 3 שרתים קטנים מאחורי Load Balancer
 ```
 
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבנה מחשבים — CPU architecture, memory hierarchy, I/O
+    - מערכות הפעלה — processes, memory management, storage
+
+    **קורסים מומלצים:**
+    - ארכיטקטורת מחשבים מתקדמת — pipelining, caching, NUMA
+    - Cloud Computing — instance types, right-sizing
+
+    **ידע מעשי:**
+    - lscpu, free, df, lsblk — system inspection
+    - htop, iostat, vmstat — performance monitoring
+    - sysbench, fio, iperf3 — benchmarking tools
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבנה מחשבים (0368-2159)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **שלב ראשון**: הכירו את החומרה של המחשב שלכם -- הריצו `lscpu`, `free -h`, `df -h` (Linux/Mac) או Task Manager (Windows)

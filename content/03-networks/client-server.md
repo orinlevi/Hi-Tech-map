@@ -547,6 +547,31 @@ Client (React App)                    Server (Node.js + Express)
 
 ---
 
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - רשתות מחשבים — client-server model, HTTP, sockets
+    - הנדסת תוכנה — design patterns, system architecture
+    - תכנות מתקדם — async I/O, networking APIs
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — microservices, message queues, RPC
+    - ארכיטקטורת תוכנה — REST, GraphQL, gRPC
+    - Web Development — full-stack, APIs
+
+    **ידע מעשי:**
+    - curl, Postman — API testing
+    - Express.js / Flask / FastAPI — backend frameworks
+    - WebSocket, SSE — real-time communication
+    - gRPC, Protocol Buffers — high-performance RPC
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - רשתות תקשורת מחשבים (0368-3030)
+    - Software Project (0368-2161)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **הבינו את הבסיס** -- בנו שרת HTTP פשוט (Node.js Express או Python Flask). כתבו 4 Routes בסיסיים (GET, POST, PUT, DELETE) ותתרגלו עם Postman או curl.

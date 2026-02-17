@@ -89,6 +89,14 @@ $$\delta = r + \gamma V(s') - V(s)$$
     **קורסים חובה**: מבוא לנוירומדע, מתמטיקה (ODE, linear algebra), הסתברות וסטטיסטיקה.
     **מומלץ**: Computational Neuroscience (Coursera — Rao & Bhatt).
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - חישוביות עצבית Computational Neuroscience (1501-1028)
+    - מודלים חישוביים בחקר המוח (1501-1029)
+    - מידול מתמטי של תאי עצב ורשתות עצבים (1500-3004)
+    - נוירוביולוגיה (1500-2000)
+    - מבנה המוח (1500-2005)
+    - סדנה: Workshop on Computational Methods in Brain Research (0368-3522)
+
 ---
 
 ## 💼 שאלות לראיון עבודה

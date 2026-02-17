@@ -83,6 +83,31 @@ test("user can login", async ({ page }) => {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — testing methodologies, TDD, software quality
+    - תכנות מונחה עצמים — mocking, dependency injection, SOLID
+
+    **קורסים מומלצים:**
+    - אבטחת איכות תוכנה — test coverage, CI/CD integration
+    - אלגוריתמים — edge cases, boundary testing
+
+    **ידע מעשי:**
+    - Jest — unit testing, mocking, coverage
+    - React Testing Library — component testing
+    - Playwright — E2E browser testing
+    - GitHub Actions — CI/CD test automation
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+    - תוכנה 1 (0368-2157)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **Jest** — unit tests לפונקציות

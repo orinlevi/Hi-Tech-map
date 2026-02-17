@@ -283,6 +283,31 @@ for word, vec in words.items():
 !!! note "מה רואים כאן?"
     "נסיך" ו-"מלכה" קרובים ל-"מלך" יותר מ-"חתול". זה הרעיון של Embeddings -- מילים עם משמעות דומה ממופות לנקודות קרובות במרחב. שימו לב ש-Cosine ו-Euclidean נותנים את אותו דירוג כאן, אבל זה לא תמיד המצב!
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אלגברה לינארית — וקטורים, מכפלה סקלרית, מרחבים, תת-מרחבים
+    - למידת מכונה — embeddings, feature engineering, dimensionality reduction
+
+    **קורסים מומלצים:**
+    - אופטימיזציה — convex sets, norms
+    - תורת המידע — distance metrics, information geometry
+
+    **ידע מעשי:**
+    - Python + NumPy — vector operations
+    - scikit-learn — PCA, t-SNE, UMAP
+    - Vector databases — FAISS, Chroma, Pinecone
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - אלגברה לינארית 1ב (0366-1119)
+    - אלגברה לינארית 2ב (0366-1120)
+    - מבוא ללמידה חישובית (0368-3235)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **בסיס מתמטי** -- ודאו שאתם מרגישים בנוח עם אלגברה לינארית בסיסית: וקטורים, מכפלה סקלרית, נורמות. קורס מומלץ: 3Blue1Brown -- Essence of Linear Algebra (YouTube).

@@ -223,6 +223,12 @@ print(np.round(output, 2))
     - Fine-tuning, LoRA, PEFT
     - Prompt engineering
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא ללמידה חישובית (0368-3235)
+    - יסודות הלמידה העמוקה (0368-3080)
+    - Natural Language Processing (0368-3077)
+    - אלגברה לינארית 2ב (0366-1120)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

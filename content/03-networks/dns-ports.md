@@ -202,6 +202,10 @@ lsof -i -P -n | grep LISTEN
     - Wireshark — network packet analysis
     - DNS providers (Route53, Cloudflare)
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - רשתות תקשורת מחשבים (0368-3030)
+    - מערכות הפעלה (0368-2162)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

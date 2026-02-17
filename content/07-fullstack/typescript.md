@@ -125,6 +125,31 @@ function area(shape: Shape): number {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - תכנות מונחה עצמים — type systems, generics, interfaces
+    - הנדסת תוכנה — code quality, refactoring, design patterns
+
+    **קורסים מומלצים:**
+    - שפות תכנות — type theory, static vs dynamic typing
+    - מבני נתונים — generic data structures, type safety
+
+    **ידע מעשי:**
+    - TypeScript — types, interfaces, generics, utility types
+    - tsconfig.json — strict mode, compiler options
+    - Zod — runtime validation with TypeScript types
+    - Prisma / tRPC — type-safe full-stack development
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - תוכנה 1 (0368-2157)
+    - Software Project (0368-2161)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **JavaScript חזק** — TypeScript הוא superset, צריך JS קודם

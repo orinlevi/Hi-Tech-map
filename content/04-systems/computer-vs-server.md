@@ -306,6 +306,30 @@ python app.py --host 0.0.0.0 --port 80
   + Ultra-low latency
 ```
 
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות הפעלה — Linux, processes, virtualization
+    - מבנה מחשבים — server hardware, architecture
+
+    **קורסים מומלצים:**
+    - Cloud Computing — IaaS, PaaS, SaaS, serverless
+    - DevOps Engineering — deployment, infrastructure management
+    - רשתות מחשבים — data center networking
+
+    **ידע מעשי:**
+    - Linux CLI — ssh, systemctl, journalctl
+    - AWS / GCP / Azure — cloud providers
+    - Docker — containerization basics
+    - VirtualBox / VMware — virtualization
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבנה מחשבים (0368-2159)
+    - מערכות הפעלה (0368-2162)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **להבין את הבסיס** -- התקינו Linux (WSL על Windows, או השתמשו ב-Terminal ב-macOS). תלמדו פקודות בסיסיות: `ssh`, `ls`, `cd`, `top`

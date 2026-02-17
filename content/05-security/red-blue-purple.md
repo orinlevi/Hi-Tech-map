@@ -356,6 +356,31 @@ done
 ??? tip "מה למדנו מהתרגיל?"
     הזיהוי עבד, אבל התגובה האוטומטית היתה חסרה. Purple Team מזהה את הפער ויחד — Red ו-Blue — מיישמים Rate Limiting וכלל התראה חדש.
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אבטחת מידע — penetration testing, incident response, threat modeling
+    - רשתות מחשבים — network protocols, traffic analysis, firewalls
+
+    **קורסים מומלצים:**
+    - מערכות הפעלה — privilege escalation, process isolation
+    - Digital Forensics — log analysis, evidence collection
+
+    **ידע מעשי:**
+    - Nmap, Burp Suite — reconnaissance and exploitation tools
+    - Wireshark, Splunk — blue team monitoring
+    - TryHackMe / HackTheBox — hands-on CTF practice
+    - MITRE ATT&CK Navigator — coverage mapping
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא לאבטחת מידע (0368-3065)
+    - אבטחת מוצרים ושירותים דיגיטליים (0368-3079)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```text

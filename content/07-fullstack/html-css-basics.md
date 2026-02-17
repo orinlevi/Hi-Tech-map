@@ -225,6 +225,31 @@ Grid הוא מערכת פריסה **דו-ממדית** — שורות ועמוד�
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבוא למדעי המחשב — programming fundamentals, problem solving
+    - הנדסת תוכנה — software project development, web technologies
+
+    **קורסים מומלצים:**
+    - עיצוב ממשקים — UI/UX principles, accessibility
+    - אינטראקציה אדם-מחשב — user-centered design
+
+    **ידע מעשי:**
+    - HTML5 — semantic elements, forms, accessibility
+    - CSS3 — Flexbox, Grid, responsive design
+    - DevTools — Chrome inspector, debugging
+    - Tailwind CSS — utility-first framework
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא מורחב למדמ"ח (0368-1105)
+    - Software Project (0368-2161)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **HTML בסיסי** — תגיות, forms, semantic elements → freeCodeCamp

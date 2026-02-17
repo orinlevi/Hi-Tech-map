@@ -198,6 +198,10 @@ predictions = model.predict(new_traffic)
     - YARA rules — malware classification
     - Wireshark + Zeek — network traffic analysis
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא לאבטחת מידע (0368-3065)
+    - מבוא ללמידה חישובית (0368-3235)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

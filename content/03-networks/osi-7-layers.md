@@ -487,6 +487,27 @@ wireshark capture.pcap
 
 ---
 
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - רשתות מחשבים — OSI model, TCP/IP stack, protocols
+    - מערכות הפעלה — networking stack, sockets, I/O
+
+    **קורסים מומלצים:**
+    - אבטחת רשתות — protocol vulnerabilities, packet analysis
+    - מערכות מבוזרות — distributed networking, routing
+
+    **ידע מעשי:**
+    - Wireshark — packet capture and analysis
+    - tcpdump — command-line packet analysis
+    - ping, traceroute, dig, curl — network debugging tools
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - רשתות תקשורת מחשבים (0368-3030)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **שננו את 7 השכבות** -- השתמשו ב-Mnemonic ("Please Do Not Throw Sausage Pizza Away") ותבינו מה כל שכבה עושה ברמה כללית.

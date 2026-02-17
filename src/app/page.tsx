@@ -24,7 +24,7 @@ export default function HomePage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       {/* Hero */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-8">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           🗺️ מפת הייטק
         </h1>
@@ -34,6 +34,28 @@ export default function HomePage() {
         <div className="flex justify-center gap-8 mt-6 text-sm text-gray-500 dark:text-gray-400">
           <span><strong className="text-teal-600 dark:text-teal-400">{sections.length}</strong> מדורים</span>
           <span><strong className="text-teal-600 dark:text-teal-400">{totalUnits}</strong> נושאים</span>
+        </div>
+      </div>
+
+      {/* Explainer */}
+      <div className="max-w-3xl mx-auto mb-12 rounded-xl border border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-gray-900/50 p-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-3">מה יש כאן ואיך משתמשים?</h2>
+        <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p>
+            <strong className="text-gray-800 dark:text-gray-200">המפה הזו בנויה עבור סטודנטים לתואר דו-חוגי בפסיכולוגיה ומדעי המחשב עם הדגש במדעי המוח</strong> — אבל מתאימה לכל מי שרוצה להבין את עולם הטכנולוגיה לעומק.
+          </p>
+          <p>
+            כל נושא מכיל הסבר ברור עם דוגמאות קוד, אנלוגיות מהעולם האמיתי, טעויות נפוצות שכדאי להימנע מהן, ובסוף — <strong className="text-gray-800 dark:text-gray-200">שאלות לראיונות עבודה</strong> עם תשובות מפורטות.
+          </p>
+          <p>
+            בנוסף, בכל דף יש המלצות ספציפיות לקורסים מתוכנית הלימודים באוניברסיטת תל אביב, מסלול למידה עצמית, וקישורים לנושאים קשורים.
+          </p>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3 text-xs">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-700 dark:text-teal-300 px-3 py-1">💼 שאלות ראיון בכל דף</span>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-300 px-3 py-1">🎓 קורסים מתוכנית TAU</span>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-700 dark:text-purple-300 px-3 py-1">🛤️ מסלול למידה עצמית</span>
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-100 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 px-3 py-1">🔍 חיפוש עם Cmd+K</span>
         </div>
       </div>
 

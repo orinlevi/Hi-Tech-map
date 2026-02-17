@@ -95,6 +95,31 @@ app.use((err, req, res, next) => {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — backend architecture, middleware patterns
+    - רשתות מחשבים — HTTP, TCP, client-server communication
+
+    **קורסים מומלצים:**
+    - מערכות הפעלה — event loops, threads, I/O
+    - מסדי נתונים — database connectivity, ORM
+
+    **ידע מעשי:**
+    - Node.js — modules, streams, event loop internals
+    - Express — routing, middleware, error handling
+    - REST API — CRUD operations, authentication
+    - Docker + PM2 — deployment and process management
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+    - רשתות תקשורת מחשבים (0368-3030)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **JavaScript חזק** — async/await, modules, error handling

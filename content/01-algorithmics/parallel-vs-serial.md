@@ -149,6 +149,11 @@ def sum_parallel(arr, num_workers=4):
     - Docker + Kubernetes (container orchestration)
     - Apache Spark / Dask — distributed data processing
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מערכות הפעלה (0368-2162)
+    - מבנה מחשבים (0368-2159)
+    - אלגוריתמים (0368-2160)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

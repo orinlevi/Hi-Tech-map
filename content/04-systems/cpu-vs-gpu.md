@@ -390,6 +390,30 @@ for epoch in range(10):
     output = model(x)  # עובד!
     ```
 
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבנה מחשבים — CPU architecture, parallelism, SIMD
+    - אלגוריתמים — parallel algorithms, complexity
+
+    **קורסים מומלצים:**
+    - ארכיטקטורת מחשבים מתקדמת — GPU architecture, CUDA, HPC
+    - למידת מכונה — neural networks, matrix operations
+    - חישוב מקבילי — threading, GPU programming
+
+    **ידע מעשי:**
+    - PyTorch / TensorFlow — GPU-accelerated ML
+    - nvidia-smi — GPU monitoring
+    - CUDA basics — understanding GPU programming model
+    - Google Colab — free GPU access
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבנה מחשבים (0368-2159)
+    - נושאים מתקדמים בארכיטקטורת מחשבים (0368-3087)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **שלב ראשון**: התקינו PyTorch עם תמיכה ב-CUDA -- `pip install torch` (בודק GPU אוטומטית)

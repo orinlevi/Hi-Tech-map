@@ -129,6 +129,31 @@ function Button() {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — component architecture, design patterns, software project
+    - תכנות מונחה עצמים — state management, composition patterns
+
+    **קורסים מומלצים:**
+    - אלגוריתמים — diffing algorithms, tree structures
+    - עיצוב ממשקים — UI/UX principles, user interaction
+
+    **ידע מעשי:**
+    - React — components, hooks, state, effects
+    - React Router / Next.js — routing and navigation
+    - Zustand / TanStack Query — state management
+    - React Testing Library — component testing
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+    - נושאים מתקדמים בתכנות (0368-3058)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **JavaScript + HTML/CSS** — בסיס חובה

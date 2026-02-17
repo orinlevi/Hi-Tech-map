@@ -90,6 +90,31 @@ const nextConfig = {
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — software architecture, full-stack development
+    - רשתות מחשבים — HTTP, caching, client-server architecture
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — SSR, edge computing, CDN
+    - מסדי נתונים — data fetching patterns, ORM
+
+    **ידע מעשי:**
+    - Next.js App Router — server components, layouts, routing
+    - Rendering strategies — SSG, SSR, ISR
+    - Vercel — deployment and edge functions
+    - Static export — GitHub Pages, no-server hosting
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - Software Project (0368-2161)
+    - נושאים מתקדמים בתכנות (0368-3058)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **React** — components, hooks, state (חובה קודם)

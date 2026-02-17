@@ -165,6 +165,31 @@ const { theme = "light", lang = "he" } = settings;
 
 ---
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבוא למדעי המחשב — programming paradigms, data types, control flow
+    - תכנות מונחה עצמים — classes, prototypes, design patterns
+
+    **קורסים מומלצים:**
+    - מערכות הפעלה — event loops, concurrency models
+    - אלגוריתמים — complexity, data structures in JS
+
+    **ידע מעשי:**
+    - ES6+ — arrow functions, destructuring, modules
+    - Async programming — Promises, async/await, Event Loop
+    - DOM manipulation — events, selectors, rendering
+    - javascript.info — comprehensive free tutorial
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא מורחב למדמ"ח (0368-1105)
+    - תוכנה 1 (0368-2157)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 1. **בסיס** — variables, types, operators, conditions, loops

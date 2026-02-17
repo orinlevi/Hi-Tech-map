@@ -238,6 +238,10 @@ Clients ──► [Firewall] ──► [Reverse Proxy/Nginx] ──► [App Serv
     - nginx — reverse proxy, load balancing
     - Wireshark / curl — network debugging
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - רשתות תקשורת מחשבים (0368-3030)
+    - Software Project (0368-2161)
+
 ---
 
 ## 🛤️ מאיפה מתחילים

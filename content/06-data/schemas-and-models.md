@@ -546,6 +546,30 @@ CREATE INDEX idx_comments_post ON comments(post_id);
 ??? info "ON DELETE CASCADE — מה קורה כשמוחקים?"
     `ON DELETE CASCADE` אומר: אם מוחקים פוסט, כל התגיות והתגובות שלו נמחקות אוטומטית. אפשרויות נוספות: `ON DELETE SET NULL` (השדה הופך ל-NULL), `ON DELETE RESTRICT` (מונע מחיקה אם יש הפניות).
 
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מסדי נתונים — schema design, normalization, ER diagrams
+    - מבני נתונים — data modeling, relationships
+
+    **קורסים מומלצים:**
+    - הנדסת תוכנה — ORM, design patterns, migrations
+    - אלגוריתמים — data organization, optimization
+
+    **ידע מעשי:**
+    - SQL — CREATE TABLE, constraints, ALTER TABLE
+    - dbdiagram.io — visual schema design
+    - SQLAlchemy / Prisma — ORM and migrations
+    - PostgreSQL data types — UUID, JSONB, TIMESTAMPTZ
+
+    **מתוכנית הלימודים שלך ב-TAU:**
+    - מבוא למדעי הנתונים (0300-0300)
+
+---
+
 ## 🛤️ מאיפה מתחילים
 
 ```

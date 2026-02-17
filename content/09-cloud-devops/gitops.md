@@ -67,6 +67,10 @@ Developer → Push to Git → ArgoCD detects change → Sync to K8s → App upda
 !!! tip "לימוד אקדמי"
     **קורסים**: הנדסת תוכנה (CI/CD, version control), מערכות מבוזרות.
 
+    **מתוכנית הלימודים שלך ב-TAU:**
+
+    - Software Project (0368-2161)
+
 ---
 
 ## 💼 שאלות לראיון עבודה
