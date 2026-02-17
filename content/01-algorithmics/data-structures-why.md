@@ -110,3 +110,59 @@ def is_registered_set(username):
 - [סיבוכיות (Complexity)](complexity.md) — ניתוח הסיבוכיות של כל פעולה על כל מבנה נתונים
 - [מהי אלגוריתמיקה](what-is-algorithmics.md) — מבני נתונים ואלגוריתמים הולכים יחד
 - [מה זה Database](../06-data/what-is-a-database.md) — מסדי נתונים הם בעצם מבני נתונים מתוחכמים שחיים על דיסק
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבוא למדעי המחשב — arrays, lists, stacks, queues
+    - מבני נתונים — trees, heaps, hash tables, graphs
+    - אלגוריתמים — חיפוש, מיון, DFS/BFS, shortest path
+    - מתמטיקה בדידה — sets, relations, logic, combinatorics
+
+    **קורסים מומלצים:**
+    - מערכות הפעלה — memory management, caching (שימוש במבני נתונים)
+    - מסדי נתונים — B-trees, indexing, query optimization
+    - תכנות מתקדם — generics, iterators, design patterns
+
+    **ידע מעשי:**
+    - Python / Java / C++ — מימוש מאפס
+    - LeetCode / HackerRank — תרגול יומי
+    - Visualgo.net — הדמיה של מבני נתונים
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **"Introduction to Algorithms" (CLRS)** — הספר הקלאסי
+2. **CS50** (Harvard) — יסודות עם C ו-Python
+3. **NeetCode / LeetCode** — תרגול מובנה
+4. **Visualgo** — ראו איך מבני נתונים עובדים ויזואלית
+5. **מימוש מאפס** — כתבו LinkedList, HashMap, BST לבד
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מתי להשתמש ב-Array vs LinkedList?"
+    **Array**: גישה אקראית O(1), cache-friendly, הוספה בסוף O(1) amortized. גרוע בהוספה/מחיקה באמצע O(n).
+    **LinkedList**: הוספה/מחיקה O(1) (אם יש pointer), לא cache-friendly, גישה O(n). משתמשים ב-LL כשיש הרבה insertions/deletions באמצע.
+
+??? tip "מה Hash Table ומה קורה ב-Collision?"
+    **Hash Table** — מבנה נתונים שממפה key → value דרך hash function. O(1) average lookup/insert. **Collision** — שני keys עם אותו hash:
+    1. **Chaining** — linked list בכל slot
+    2. **Open addressing** — חיפוש slot פנוי (linear probing, quadratic, double hashing)
+    Worst case: O(n) אם הכל מתנגש. Load factor > 0.75 → resize.
+
+??? tip "מה BST ומה היתרון של Balanced BST?"
+    **BST** (Binary Search Tree) — כל node: left < node < right. חיפוש O(h) כש-h = גובה העץ. **Balanced BST** (AVL, Red-Black) — מבטיח h = O(log n). בלי balancing, BST יכול להידרדר לlinked list: O(n).
+
+??? tip "מה Heap ומה השימושים?"
+    **Heap** — עץ בינארי שבו parent ≥ children (Max Heap) או parent ≤ children (Min Heap). Insert/Extract: O(log n). Peek: O(1). שימושים: Priority Queue, Dijkstra, Median finding, Top-K elements, Heap Sort.
+
+??? tip "מה Stack ומה Queue ומתי משתמשים?"
+    **Stack** — LIFO (Last In, First Out). שימושים: undo, function call stack, DFS, parentheses matching, expression evaluation.
+    **Queue** — FIFO (First In, First Out). שימושים: BFS, task scheduling, message queues, buffering.
+    **Deque** — double-ended queue, insert/remove משני הצדדים. Sliding window problems.

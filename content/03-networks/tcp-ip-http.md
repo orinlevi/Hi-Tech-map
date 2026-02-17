@@ -182,3 +182,56 @@ curl -X POST https://httpbin.org/post \
 - [7 שכבות OSI](osi-7-layers.md) -- TCP חי ב-Layer 4, IP ב-Layer 3, ו-HTTP ב-Layer 7. ראו את התמונה המלאה.
 - [DNS & Ports](dns-ports.md) -- לפני שה-TCP connection נפתח, צריך DNS resolution ו-Port.
 - [Credentials ואבטחת הרשאות](../05-security/credentials.md) -- HTTPS ו-TLS הם רק חלק אחד מאבטחה. מה עם סיסמאות, Tokens, ו-API Keys?
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - רשתות מחשבים — TCP/IP stack, HTTP, sockets
+    - מערכות הפעלה — I/O, buffers, network syscalls
+    - מבוא לאינטרנט — client-server, request-response
+
+    **קורסים מומלצים:**
+    - אבטחת רשתות — TLS, HTTPS, certificate chains
+    - מערכות מבוזרות — RPC, load balancing, reverse proxy
+    - Web Development — REST, GraphQL, WebSocket
+
+    **ידע מעשי:**
+    - curl, httpie — HTTP clients
+    - Wireshark, tcpdump — packet analysis
+    - Postman / Insomnia — API testing
+    - nginx / Apache — web server configuration
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **curl** — שלחו HTTP requests מהטרמינל
+2. **"HTTP: The Definitive Guide"** — O'Reilly (ספר מקיף)
+3. **MDN Web Docs — HTTP** — reference מצוין
+4. **Wireshark** — תראו TCP handshake ו-HTTP בפועל
+5. **בנו web server פשוט** — Python/Node.js
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה TCP 3-Way Handshake?"
+    **SYN** → Client שולח SYN עם sequence number. **SYN-ACK** → Server מאשר ושולח SYN משלו. **ACK** → Client מאשר. עכשיו החיבור פתוח. סגירה: FIN → ACK → FIN → ACK (4-way).
+
+??? tip "מה ההבדל בין HTTP/1.1, HTTP/2 ו-HTTP/3?"
+    **HTTP/1.1** — text-based, one request per connection (or pipelining). **HTTP/2** — binary, multiplexing (multiple streams on one connection), header compression (HPACK), server push. **HTTP/3** — QUIC (UDP-based), built-in encryption, faster handshake, better mobile performance.
+
+??? tip "מה ההבדל בין GET ל-POST?"
+    **GET** — קריאת נתונים, idempotent, parameters ב-URL (query string), cacheable, limited length. **POST** — שליחת נתונים, not idempotent, parameters ב-body, not cacheable, no length limit. PUT = update (idempotent), DELETE = מחיקה, PATCH = partial update.
+
+??? tip "מה HTTPS ואיך TLS עובד?"
+    **HTTPS** = HTTP + TLS encryption. TLS handshake: (1) Client Hello (supported ciphers), (2) Server Hello + Certificate, (3) Client verifies cert, (4) Key exchange (Diffie-Hellman), (5) Symmetric encryption begins. מגן מפני MITM, eavesdropping, tampering.
+
+??? tip "מה TCP Congestion Control?"
+    TCP מנהל את קצב השליחה כדי לא להציף את הרשת. **Slow Start** — מתחיל עם window קטן, מכפיל כל RTT. **Congestion Avoidance** — גדל ליניארית. **Fast Retransmit/Recovery** — מזהה אובדן ומגיב מהר. אלגוריתמים: Reno, Cubic (default Linux), BBR (Google).
+
+??? tip "מה Status Codes חשובים?"
+    **2xx** — הצלחה: 200 OK, 201 Created, 204 No Content. **3xx** — redirect: 301 Permanent, 302 Temporary, 304 Not Modified. **4xx** — client error: 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Rate Limit. **5xx** — server error: 500 Internal, 502 Bad Gateway, 503 Unavailable.

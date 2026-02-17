@@ -148,3 +148,60 @@ def simple_gradient_descent():
 - [מקבילי מול סדרתי](parallel-vs-serial.md) — למה GPU מאיץ אימון ML ואיך Parallelism משנה את המשחק
 - [Classification](../02-ml-core/classification.md) — אלגוריתמי סיווג כמו Logistic Regression, Decision Trees ו-SVM
 - [Neural Networks](../02-ml-core/neural-networks.md) — הארכיטקטורה שמאחורי Deep Learning ואיך Backpropagation עובד בפועל
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מבוא למדעי המחשב — יסודות אלגוריתמיקה ותכנות
+    - אלגוריתמים ומבני נתונים — חיפוש, מיון, גרפים, DP
+    - חדו"א 1+2 — נגזרות, אינטגרלים, Chain Rule (בסיס ל-backprop)
+    - אלגברה לינארית — מטריצות, וקטורים, eigenvalues
+    - למידת מכונה — Gradient Descent, optimization, regularization
+
+    **קורסים מומלצים:**
+    - אופטימיזציה — convex optimization, constrained optimization
+    - אנליזה נומרית — שגיאות חישוב, יציבות אלגוריתמים
+    - הסתברות וסטטיסטיקה — הבסיס לכל ML
+
+    **ידע מעשי:**
+    - Python + NumPy — מימוש אלגוריתמים
+    - PyTorch / TensorFlow — autograd, optimizers
+    - Weights & Biases / MLflow — tracking ניסויים
+    - profiling tools — זיהוי צווארי בקבוק
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **CS50** (Harvard) או **מבוא למדמ"ח** — יסודות
+2. **Algorithms Specialization** (Stanford, Coursera) — אלגוריתמים קלאסיים
+3. **Andrew Ng's ML Course** — Gradient Descent בפועל
+4. **Fast.ai** — practical deep learning
+5. **LeetCode / HackerRank** — תרגול אלגוריתמים
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה Gradient Descent ואיך הוא עובד?"
+    אלגוריתם אופטימיזציה שמחפש מינימום של פונקציה. בכל צעד מחשב את ה-gradient (כיוון העלייה התלולה) ועושה צעד בכיוון ההפוך. `θ = θ - α∇L(θ)`. וריאציות: SGD (דוגמה אחת), Mini-batch (קבוצה), Adam (adaptive learning rate + momentum).
+
+??? tip "מה ההבדל בין Grid Search ל-Random Search?"
+    **Grid Search** — בודק כל קומבינציה אפשרית. O(k^n). מבטיח כיסוי אבל exponential.
+    **Random Search** — דוגם קומבינציות אקראית. Bergstra & Bengio (2012) הראו שהוא יעיל יותר כי hyperparameters בד"כ שונים בחשיבותם — random search מכסה יותר ערכים של ההיפרפרמטר החשוב.
+
+??? tip "מה Backpropagation ולמה הוא יעיל?"
+    Backprop מחשב gradients של ה-loss ביחס לכל המשקלים ברשת, בעזרת **Chain Rule** על ה-DAG בסדר טופולוגי הפוך. יעיל כי: O(n) במקום O(n²) — משתמש ב-Dynamic Programming ולא מחשב כל נגזרת בנפרד.
+
+??? tip "מה ההבדל בין Adam ל-SGD?"
+    **SGD** — צעד קבוע (learning rate) בכיוון ה-gradient.
+    **Adam** — adaptive learning rate + momentum. שומר moving average של gradient (m) ושל gradient² (v). מתאים את ה-LR לכל פרמטר בנפרד. בד"כ מתכנס מהר יותר, אבל SGD עם momentum לפעמים מגיע לgeneralization טובה יותר.
+
+??? tip "מה Learning Rate Scheduling ולמה צריך?"
+    התחלה עם LR גבוה (התכנסות מהירה) וירידה הדרגתית (fine-tuning). שיטות: Step Decay, Cosine Annealing, Warmup + Decay. חשוב כי LR גבוה מדי → לא מתכנס; LR נמוך מדי → נתקע ב-local minimum.
+
+??? tip "מה KD-Tree ולמה הוא רלוונטי ל-ML?"
+    מבנה נתונים לחיפוש שכנים (nearest neighbor search) במרחב רב-ממדי. במקום brute-force O(n), מאפשר O(log n) בממדים נמוכים. רלוונטי ל-KNN, clustering, recommendation systems. בממדים גבוהים (>20) — Approximate NN (FAISS, Annoy) עדיף.

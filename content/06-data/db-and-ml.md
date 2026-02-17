@@ -210,3 +210,53 @@ print(results["documents"])
 - [שאילתות ואינדקסים (Queries and Indexes)](queries-and-indexes.md) — איך שולפים נתונים ביעילות מ-Database רגיל
 - [וקטורים ומרחבים (Vectors and Spaces)](../02-ml-core/vectors-and-spaces.md) — המתמטיקה מאחורי Embeddings ו-Vector Search
 - [סיווג (Classification)](../02-ml-core/classification.md) — דוגמה למשימת ML שמתחילה מנתונים ב-Database
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מסדי נתונים — SQL, indexing, query optimization
+    - למידת מכונה — data pipelines, feature engineering
+    - סטטיסטיקה — sampling, distributions, hypothesis testing
+
+    **קורסים מומלצים:**
+    - Data Engineering — ETL, data lakes, streaming
+    - Big Data — Spark, Hadoop, distributed processing
+    - MLOps — model serving, monitoring, pipelines
+
+    **ידע מעשי:**
+    - SQL + pandas — data manipulation
+    - Apache Spark / Dask — big data processing
+    - Feature stores (Feast, Tecton)
+    - MLflow / Kubeflow — ML pipelines
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **SQL tutorial** — W3Schools או Mode Analytics
+2. **Kaggle datasets** — practice data loading and preprocessing
+3. **Apache Spark Getting Started** — distributed data processing
+4. **"Designing Data-Intensive Applications"** — Martin Kleppmann
+5. **Feature store concepts** — Feast documentation
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "למה DB חשוב ל-ML?"
+    ML צריך data — ו-data חי ב-DB. Feature engineering = SQL queries. Training data = DB queries. Feature store = DB-like system. Model serving = lookup predictions. Monitoring = logging predictions to DB. Data quality → model quality.
+
+??? tip "מה Feature Store?"
+    **Feature Store** — מאגר מרכזי של features ל-ML. פותר: (1) Feature reuse בין teams, (2) Online serving (low latency) + Offline training (batch), (3) Point-in-time correctness (no data leakage), (4) Feature versioning. דוגמאות: Feast, Tecton, Hopsworks.
+
+??? tip "מה ההבדל בין OLTP ל-OLAP בהקשר ML?"
+    **OLTP** — transactional (INSERT/UPDATE, row-based). Production DB. **OLAP** — analytical (SELECT aggregations, column-based). Data warehouse. ML training → OLAP (batch reads). ML serving → OLTP (low-latency lookups). ETL moves data from OLTP to OLAP.
+
+??? tip "מה Data Leakage?"
+    שימוש בinformation מהעתיד / מה-target variable בtraining. דוגמאות: feature שמחושב על כל ה-data (כולל test), timestamp features שלא היו ידועים בreal-time. תוצאה: model מצוין בtraining, גרוע בproduction. Prevention: strict train/test split, temporal validation.
+
+??? tip "מה Vector Database?"
+    DB שמותאם לאחסון וחיפוש embeddings (vectors). Nearest neighbor search על vectors. שימושים: semantic search, recommendation, RAG (Retrieval Augmented Generation). דוגמאות: Pinecone, Weaviate, Milvus, Qdrant, pgvector. ANN (Approximate Nearest Neighbor) algorithms: HNSW, IVF.

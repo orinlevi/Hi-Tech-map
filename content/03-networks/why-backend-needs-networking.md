@@ -216,3 +216,53 @@ Clients ──► [Firewall] ──► [Reverse Proxy/Nginx] ──► [App Serv
 - [DNS & Ports](dns-ports.md) -- בסביבת Microservices, שירותים מוצאים אחד את השני דרך DNS, והתקשורת עוברת דרך Ports ספציפיים.
 - [Kubernetes](../04-systems/kubernetes.md) -- Kubernetes מנהל את ה-Networking בין Containers, כולל Service Discovery, Load Balancing, ו-Network Policies.
 - [Sandbox ואבטחה](../05-security/sandbox.md) -- Network Isolation הוא חלק קריטי מאבטחת Microservices. כל שירות צריך לגשת רק למה שהוא צריך.
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - רשתות מחשבים — TCP/IP, HTTP, DNS, sockets
+    - מערכות הפעלה — processes, I/O, networking stack
+    - תכנות מתקדם — client-server, async I/O
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — microservices, message queues
+    - ארכיטקטורת תוכנה — design patterns, system design
+    - DevOps — deployment, monitoring, load balancing
+
+    **ידע מעשי:**
+    - Node.js / Python Flask / Go — backend frameworks
+    - Docker — containerization
+    - nginx — reverse proxy, load balancing
+    - Wireshark / curl — network debugging
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Build a REST API** — Express.js / Flask / FastAPI
+2. **"Designing Data-Intensive Applications"** — Martin Kleppmann
+3. **Docker Getting Started** — containerize your API
+4. **Postman** — test your endpoints
+5. **Deploy to cloud** — AWS / GCP / Vercel
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "למה Backend Developer צריך להבין רשתות?"
+    כי כל request עובר דרך הרשת. צריך להבין: latency ואיך למזער, connection pooling, timeouts, retries, load balancing, DNS resolution, TLS handshake. בלי הבנה — debug של "האתר איטי" הופך לבלתי אפשרי.
+
+??? tip "מה Reverse Proxy ולמה צריך?"
+    **Reverse Proxy** (nginx, HAProxy) — יושב לפני הservers ומנתב requests. שימושים: (1) Load balancing, (2) SSL termination, (3) Caching, (4) Rate limiting, (5) Security (מסתיר internal servers). Forward Proxy = client-side (VPN). Reverse Proxy = server-side.
+
+??? tip "מה Connection Pooling?"
+    במקום לפתוח TCP connection חדש לכל request (יקר — handshake), שומרים pool של connections פתוחים ומשתמשים מחדש. חשוב ל-DB connections, HTTP clients, Redis. Pool size = trade-off בין throughput לresource usage.
+
+??? tip "מה WebSocket ומתי משתמשים?"
+    **WebSocket** — full-duplex communication על TCP connection אחד. Server יכול לשלוח data ללקוח בלי request. שימושים: chat, real-time notifications, live updates, gaming. Alternative: SSE (Server-Sent Events) — unidirectional, simpler.
+
+??? tip "מה Load Balancing?"
+    חלוקת traffic בין מספר servers. אלגוריתמים: **Round Robin** (פשוט), **Least Connections** (שולח לserver הכי פנוי), **IP Hash** (sticky sessions), **Weighted** (servers חזקים מקבלים יותר). L4 (TCP) vs L7 (HTTP) load balancing.

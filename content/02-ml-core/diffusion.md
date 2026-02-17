@@ -204,3 +204,55 @@ print(f"t=50 (noise):    mean={trajectory[50].mean():.2f}, std={trajectory[50].s
 - [Transformers](transformers.md) -- DiT (Diffusion Transformer) משלב את שתי הארכיטקטורות, ו-CLIP מבוסס Transformer
 - [רשתות נוירונים](neural-networks.md) -- U-Net הוא סוג של CNN, ו-Diffusion models הם Neural Networks
 - [AI, ML, DL -- מה ההבדל?](../00-big-picture/ai-ml-dl.md) -- Diffusion models הם חלק מ-Generative AI
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הסתברות וסטטיסטיקה — Bayesian inference, Markov chains
+    - למידה עמוקה — generative models, VAE, GAN, diffusion
+    - חדו"א — stochastic differential equations (SDE), ODE
+    - אלגברה לינארית — SVD, spectral analysis
+
+    **קורסים מומלצים:**
+    - תהליכים סטוכסטיים — Brownian motion, Langevin dynamics
+    - תורת המידע — KL divergence, ELBO
+    - ראייה ממוחשבת — image generation, evaluation metrics
+
+    **ידע מעשי:**
+    - Python + PyTorch
+    - HuggingFace Diffusers library
+    - Stable Diffusion / DALL-E architectures
+    - Weights & Biases — experiment tracking
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **"What are Diffusion Models?"** — Lil'Log blog (Lilian Weng)
+2. **Denoising Diffusion Probabilistic Models** — Ho et al. (2020) paper
+3. **HuggingFace Diffusion Course** — hands-on tutorials
+4. **Stable Diffusion WebUI** — ניסוי עם מודלים קיימים
+5. **"Understanding Diffusion Models: A Unified Perspective"** — Calvin Luo
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין Diffusion ל-GAN?"
+    **GAN** — שני מודלים (Generator + Discriminator) מתחרים. אימון לא יציב (mode collapse). **Diffusion** — מודל אחד שלומד להסיר רעש. אימון יציב יותר, diversity טובה יותר, אבל inference איטי (מאות צעדים). Diffusion הפך לstandard ליצירת תמונות.
+
+??? tip "מה Forward ו-Reverse Process ב-Diffusion?"
+    **Forward** — הוספה הדרגתית של Gaussian noise לתמונה על פני T צעדים עד שהיא noise טהור. `q(x_t|x_{t-1}) = N(√(1-β_t)·x_{t-1}, β_t·I)`.
+    **Reverse** — מודל שלומד להסיר noise צעד אחרי צעד. `p_θ(x_{t-1}|x_t)` — predicts the noise that was added.
+
+??? tip "למה Diffusion Models איטיים ומה עושים?"
+    צריכים מאות צעדי denoising (T=1000). פתרונות: **DDIM** — deterministic, fewer steps (50-100). **Latent Diffusion** — עובד ב-latent space (קטן יותר). **Consistency Models** — single-step generation. **Distillation** — progressive distillation לפחות צעדים.
+
+??? tip "מה Classifier-Free Guidance?"
+    טכניקה לשליטה ב-tradeoff בין quality ל-diversity. מאמנים מודל גם עם condition וגם בלי, ובinference: `ε_guided = ε_uncond + s·(ε_cond - ε_uncond)` כש-s = guidance scale. s גבוה = quality גבוהה אבל פחות diversity.
+
+??? tip "מה U-Net ולמה משתמשים בו ב-Diffusion?"
+    **U-Net** — ארכיטקטורת encoder-decoder עם skip connections. Encoder מקטין רזולוציה, Decoder מגדיל. Skip connections שומרים פרטים מרחביים. משתמשים ב-diffusion כי הוא טוב ב-pixel-level prediction (denoising). בStable Diffusion הU-Net עובד ב-latent space.

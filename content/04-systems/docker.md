@@ -222,3 +222,55 @@ curl http://localhost:8080
 - [Kubernetes](kubernetes.md) -- ניהול הרבה containers ב-production
 - [OpenShift](openshift.md) -- Kubernetes עם תוספות של Red Hat
 - [CI/CD](ci-cd.md) -- איך Docker משתלב ב-pipeline של deployment
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות הפעלה — processes, namespaces, cgroups
+    - רשתות מחשבים — networking, port mapping, DNS
+    - הנדסת תוכנה — deployment, environments
+
+    **קורסים מומלצים:**
+    - DevOps Engineering — containerization, orchestration
+    - Cloud Computing — container services (ECS, GKE)
+    - אבטחת מידע — container security, image scanning
+
+    **ידע מעשי:**
+    - Dockerfile writing — multi-stage builds
+    - docker-compose — multi-container apps
+    - Docker Hub / GitHub Container Registry
+    - Docker networking, volumes, secrets
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Docker Getting Started** — docs.docker.com
+2. **"Docker Deep Dive"** — Nigel Poulton (ספר)
+3. **Play with Docker** — docker playground בדפדפן
+4. **Containerize your project** — כתבו Dockerfile לפרויקט קיים
+5. **docker-compose** — הקימו app + DB + Redis
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין Container ל-VM?"
+    **VM** — hypervisor מריץ OS שלם (kernel + userspace). GB of overhead, minutes to start.
+    **Container** — חולק kernel עם host, מבודד ב-namespaces + cgroups. MB overhead, seconds to start.
+    Container = process isolation, VM = hardware isolation. Container לא secure כמו VM.
+
+??? tip "מה Dockerfile ומה Multi-Stage Build?"
+    **Dockerfile** — הוראות לבניית image: FROM (base image), COPY, RUN, CMD. **Multi-stage** — שני FROM blocks: שלב build (עם compiler/tools) ושלב final (רק artifacts). תוצאה: image קטן ונקי. דוגמה: Go binary 10MB במקום 800MB.
+
+??? tip "מה Docker Layer Caching?"
+    כל instruction ב-Dockerfile יוצרת layer. Docker עושה cache ל-layers שלא השתנו. **סדר חשוב**: COPY package.json → RUN npm install → COPY . (שינוי בקוד לא מבטל cache של npm install). Layer caching מזרז builds משמעותית.
+
+??? tip "מה Docker Networking?"
+    **bridge** (default) — containers ברשת פנימית, צריך port mapping (-p). **host** — container משתמש ברשת של ה-host ישירות. **none** — ללא רשת. **overlay** — cross-host networking (Swarm/K8s). docker-compose יוצר network אוטומטי שcontainers רואים אחד את השני by name.
+
+??? tip "מה Docker Volumes?"
+    **Volume** — persistent storage שנשמר גם אחרי שcontainer נמחק. סוגים: **Named volumes** (Docker managed), **Bind mounts** (host directory), **tmpfs** (memory only). חשוב ל-DB data, logs, configuration. Best practice: stateless containers + external volumes for data.

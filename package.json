@@ -4,10 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build:search": "npx tsx scripts/build-search-index.ts",
+    "build": "npm run build:search && next build",
     "start": "next start"
   },
   "dependencies": {
+    "fuse.js": "^7.1.0",
     "katex": "^0.16.9",
     "next": "16.1.6",
     "next-mdx-remote": "^5.0.0",
@@ -26,6 +28,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

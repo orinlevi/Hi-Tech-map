@@ -9,6 +9,10 @@ const accentColors: Record<string, { border: string; bg: string; hover: string; 
   purple:  { border: "border-purple-200 dark:border-purple-900",  bg: "bg-purple-50/50 dark:bg-purple-950/30",  hover: "hover:border-purple-400 dark:hover:border-purple-700",  text: "text-purple-600 dark:text-purple-400" },
   amber:   { border: "border-amber-200 dark:border-amber-900",   bg: "bg-amber-50/50 dark:bg-amber-950/30",   hover: "hover:border-amber-400 dark:hover:border-amber-700",   text: "text-amber-600 dark:text-amber-400" },
   rose:    { border: "border-rose-200 dark:border-rose-900",    bg: "bg-rose-50/50 dark:bg-rose-950/30",    hover: "hover:border-rose-400 dark:hover:border-rose-700",    text: "text-rose-600 dark:text-rose-400" },
+  indigo:  { border: "border-indigo-200 dark:border-indigo-900",  bg: "bg-indigo-50/50 dark:bg-indigo-950/30",  hover: "hover:border-indigo-400 dark:hover:border-indigo-700",  text: "text-indigo-600 dark:text-indigo-400" },
+  red:     { border: "border-red-200 dark:border-red-900",     bg: "bg-red-50/50 dark:bg-red-950/30",     hover: "hover:border-red-400 dark:hover:border-red-700",     text: "text-red-600 dark:text-red-400" },
+  sky:     { border: "border-sky-200 dark:border-sky-900",     bg: "bg-sky-50/50 dark:bg-sky-950/30",     hover: "hover:border-sky-400 dark:hover:border-sky-700",     text: "text-sky-600 dark:text-sky-400" },
+  pink:    { border: "border-pink-200 dark:border-pink-900",    bg: "bg-pink-50/50 dark:bg-pink-950/30",    hover: "hover:border-pink-400 dark:hover:border-pink-700",    text: "text-pink-600 dark:text-pink-400" },
 };
 
 const defaultAccent = accentColors.teal;

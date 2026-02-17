@@ -298,3 +298,56 @@ kubectl get pods
 - [OpenShift](openshift.md) -- Kubernetes עם תוספות enterprise
 - [CI/CD](ci-cd.md) -- איך מגיעים מקוד ל-deployment על K8s
 - [למה Backend צריך רשתות](../03-networks/why-backend-needs-networking.md) -- הרשת מאחורי Services וה-Pods
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות הפעלה — containers, networking, scheduling
+    - מערכות מבוזרות — consensus, replication, fault tolerance
+    - רשתות מחשבים — DNS, load balancing, service mesh
+
+    **קורסים מומלצים:**
+    - Cloud Computing — managed K8s (EKS, GKE, AKS)
+    - DevOps Engineering — GitOps, Helm, ArgoCD
+    - אבטחת מידע — RBAC, network policies, secrets management
+
+    **ידע מעשי:**
+    - kubectl — ניהול cluster
+    - Helm charts — package management
+    - minikube / kind — local K8s development
+    - Lens / k9s — UI tools
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Kubernetes.io tutorials** — official interactive tutorial
+2. **minikube** — local K8s cluster
+3. **"Kubernetes Up & Running"** — O'Reilly (ספר)
+4. **KillerCoda** — hands-on scenarios
+5. **CKA certification prep** — Certified Kubernetes Administrator
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה Pod ולמה לא Container?"
+    **Pod** = smallest deployable unit ב-K8s. מכיל 1+ containers שחולקים network namespace (IP) ו-storage volumes. למה לא container ישירות? כי sometimes צריך sidecar (logging, proxy) שרץ ליד ה-main container ומשתף resources.
+
+??? tip "מה Deployment, Service, Ingress?"
+    **Deployment** — מנהל ReplicaSet של Pods. Rolling updates, rollbacks, scaling.
+    **Service** — stable network endpoint ל-Pods (ClusterIP, NodePort, LoadBalancer). DNS-based discovery.
+    **Ingress** — HTTP/HTTPS routing מבחוץ (domain-based, path-based). צריך Ingress Controller (nginx, traefik).
+
+??? tip "מה Horizontal Pod Autoscaler (HPA)?"
+    HPA משנה את מספר ה-Pod replicas אוטומטית לפי metrics: CPU%, memory%, custom metrics (requests/sec). `minReplicas` → `maxReplicas`. Checks every 15s. Cooldown period מונע flapping. VPA (Vertical) — משנה resources per pod.
+
+??? tip "מה ConfigMap ו-Secret?"
+    **ConfigMap** — key-value configuration (env vars, config files). Plain text.
+    **Secret** — sensitive data (passwords, tokens). Base64 encoded (לא encrypted by default!). Best practice: external secrets manager (Vault, AWS Secrets Manager) + sealed secrets.
+
+??? tip "מה Namespace ולמה משתמשים?"
+    **Namespace** — virtual cluster בתוך cluster. שימושים: (1) team isolation, (2) environment separation (dev/staging/prod), (3) resource quotas, (4) RBAC. Default namespaces: default, kube-system, kube-public. Resources ב-namespace שונה = isolated by default.

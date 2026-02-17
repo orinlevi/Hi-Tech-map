@@ -176,3 +176,53 @@ predictions = model.predict(new_traffic)
 - [MITRE ATT&CK](mitre-attck.md) — ML יכול לזהות TTPs באופן אוטומטי ולשפר Detection Rules
 - [Classification](../02-ml-core/classification.md) — הבסיס ל-Malware Classification, Spam Detection ועוד
 - [AI, ML ו-Deep Learning](../00-big-picture/ai-ml-dl.md) — הרקע התיאורטי שמאחורי כל טכניקות ה-ML לאבטחה
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אבטחת מידע — cryptography, network security, threat modeling
+    - למידת מכונה — classification, anomaly detection, NLP
+    - סטטיסטיקה — hypothesis testing, false positive/negative rates
+
+    **קורסים מומלצים:**
+    - Adversarial ML — attacks on ML models
+    - Digital Forensics — log analysis, incident response
+    - NLP for Security — malware analysis, phishing detection
+
+    **ידע מעשי:**
+    - Python + scikit-learn — anomaly detection models
+    - SIEM platforms (Splunk, Elastic) — ML-powered alerts
+    - YARA rules — malware classification
+    - Wireshark + Zeek — network traffic analysis
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Kaggle — Fraud Detection** — dataset ומודלים
+2. **NIDS datasets** (CICIDS, NSL-KDD) — network intrusion detection
+3. **"Machine Learning and Security"** — Chio & Freeman (O'Reilly)
+4. **TryHackMe — ML in Cyber** — practical rooms
+5. **Adversarial Robustness Toolbox** (ART) — IBM
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "איך ML עוזר באבטחת מידע?"
+    1. **Anomaly Detection** — זיהוי behavior חריג (network, user). 2. **Malware Classification** — static/dynamic analysis. 3. **Phishing Detection** — NLP על emails/URLs. 4. **UEBA** — User Entity Behavior Analytics. 5. **Threat Intelligence** — classification, clustering של IOCs. ML מוסיף יכולת לזהות **unknown threats** (zero-day).
+
+??? tip "מה הבעיה של False Positives באבטחה?"
+    SOC analyst מקבל אלפי alerts ביום. False Positive rate גבוה = **alert fatigue** → מפספסים attacks אמיתיים. Precision חשוב יותר מ-Recall באבטחה (תלוי context). ML צריך להיות tuned ל-low FP. Feedback loop = analyst labels → model improves.
+
+??? tip "מה Adversarial ML?"
+    תקיפת ML models: **Evasion** — input שגורם למודל לטעות (adversarial examples). **Poisoning** — הכנסת data רעיל לtraining. **Model Stealing** — שכפול מודל דרך API queries. **Privacy** — extraction של training data. Defense: adversarial training, input sanitization, model monitoring.
+
+??? tip "מה UEBA?"
+    **User and Entity Behavior Analytics** — ML שלומד baseline behavior של users/entities ומזהה anomalies. דוגמאות: login ממדינה חדשה, access לfiles חריגים, שעות פעילות לא רגילות. משתמש ב-unsupervised learning (clustering, autoencoders).
+
+??? tip "מה הbias-variance tradeoff באבטחה?"
+    **High Bias** (underfitting) — מודל פשוט מדי, מפספס threats. **High Variance** (overfitting) — מודל מורכב, הרבה false positives. באבטחה — false negative (miss attack) יותר מסוכן מ-false positive (alert שווא). צריך balance שתלוי ב-risk tolerance.

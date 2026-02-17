@@ -126,3 +126,57 @@ def sum_parallel(arr, num_workers=4):
 - [מהי אלגוריתמיקה](what-is-algorithmics.md) — Parallelism הוא כלי נוסף בארגז הכלים האלגוריתמי
 - [CPU vs GPU](../04-systems/cpu-vs-gpu.md) — הבדלי הארכיטקטורה שמאפשרים Parallelism
 - [אלגוריתמים ב-ML](algorithms-in-ml.md) — למה אימון מודלים דורש חישוב מקבילי
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות הפעלה — processes, threads, scheduling, synchronization
+    - ארכיטקטורת מחשבים — pipelines, caches, multi-core
+    - אלגוריתמים מקביליים — parallel algorithms, PRAM model
+    - מבוא למדעי המחשב — concurrency basics
+
+    **קורסים מומלצים:**
+    - חישוב מבוזר (Distributed Systems) — consensus, replication
+    - GPU Computing / CUDA — massive parallelism
+    - High Performance Computing (HPC) — MPI, OpenMP
+
+    **ידע מעשי:**
+    - Python multiprocessing / threading
+    - CUDA / OpenCL basics
+    - Docker + Kubernetes (container orchestration)
+    - Apache Spark / Dask — distributed data processing
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Python `threading` ו-`multiprocessing`** — ניסוי מעשי
+2. **"Operating Systems: Three Easy Pieces"** — ספר חינמי מצוין
+3. **CUDA Toolkit Getting Started** — GPU programming
+4. **MIT 6.824: Distributed Systems** — קורס מתקדם (חינמי)
+5. **LeetCode concurrency problems** — תרגול
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין Concurrency ל-Parallelism?"
+    **Concurrency** — ניהול מספר משימות שחופפות בזמן (לא בהכרח במקביל). **Parallelism** — ביצוע בו-זמני ממש (multi-core). Concurrency = structure, Parallelism = execution. Go routines הן concurrent; GPU threads הם parallel.
+
+??? tip "מה חוק Amdahl?"
+    `Speedup = 1 / (S + (1-S)/P)` כאשר S = החלק הסדרתי, P = מספר processors. אפילו עם אינסוף processors, ה-speedup מוגבל ל-1/S. עם 10% סדרתי, מקסימום speedup = 10x. מסקנה: שיפור החלק הסדרתי חשוב יותר מהוספת processors.
+
+??? tip "מה Race Condition ואיך נמנעים?"
+    שני threads ניגשים למשאב משותף בו-זמנית ומייצרים תוצאה לא צפויה. פתרונות: **Mutex/Lock** (מנעול), **Semaphore** (מונה), **Atomic operations**, **Message passing** (ללא shared state). Go מעדיף "share by communicating" על "communicate by sharing".
+
+??? tip "מה Deadlock ומה 4 התנאים שלו?"
+    מצב שבו 2+ threads ממתינים אחד לשני ואף אחד לא מתקדם. 4 תנאי Coffman: (1) Mutual exclusion, (2) Hold and wait, (3) No preemption, (4) Circular wait. מספיק לשבור תנאי אחד כדי למנוע.
+
+??? tip "מה GIL ב-Python?"
+    **Global Interpreter Lock** — מנעול שמונע ריצה מקבילית של Python bytecode. Threading ב-Python = concurrency (לא parallelism). פתרונות: `multiprocessing` (processes נפרדים), C extensions, `asyncio` (I/O bound), Cython, או שפות אחרות.
+
+??? tip "מה MapReduce?"
+    מודל חישוב מבוזר: (1) **Map** — מפעיל פונקציה על כל element, (2) **Shuffle** — מקבץ לפי key, (3) **Reduce** — מצמצם כל קבוצה לערך אחד. דוגמה: ספירת מילים. Hadoop = implementation; Spark = improved (in-memory).

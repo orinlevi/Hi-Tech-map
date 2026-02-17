@@ -143,3 +143,55 @@ Exfiltration        │ Exfil Over C2 Channel  │ T1041
 - [Red, Blue & Purple Teams](red-blue-purple.md) — הצוותים שמשתמשים ב-ATT&CK באופן יום-יומי לתכנון התקפות ובניית הגנות
 - [אבטחה ו-ML](security-and-ml.md) — Machine Learning יכול לעזור לזהות TTPs באופן אוטומטי ולשפר Detection
 - [Sandbox](sandbox.md) — Sandboxing הוא טכניקת הגנה שמופיעה ב-ATT&CK כנגד Execution ו-Defense Evasion
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אבטחת מידע — threat modeling, risk assessment
+    - רשתות מחשבים — network protocols, traffic analysis
+    - מערכות הפעלה — persistence mechanisms, privilege escalation
+
+    **קורסים מומלצים:**
+    - Digital Forensics — incident investigation
+    - Threat Intelligence — IOCs, threat actors, campaigns
+    - SOC Operations — SIEM, detection engineering
+
+    **ידע מעשי:**
+    - MITRE ATT&CK Navigator — mapping coverage
+    - Atomic Red Team — testing detections
+    - Sigma rules — detection-as-code
+    - Splunk / Elastic SIEM — log analysis
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **attack.mitre.org** — explore the matrix
+2. **ATT&CK Navigator** — interactive coverage mapping
+3. **Atomic Red Team** — test techniques hands-on
+4. **TryHackMe — Cyber Kill Chain room** — guided learning
+5. **MITRE ATT&CK Training** — official certification courses
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה MITRE ATT&CK?"
+    **Framework** שממפה tactics (מטרות) ו-techniques (שיטות) של תוקפים. 14 tactics מ-Reconnaissance עד Impact. כל technique מתועדת עם: description, procedures, detections, mitigations. שימושים: threat intelligence, detection engineering, red team planning, gap analysis.
+
+??? tip "מה ההבדל בין Tactic ל-Technique?"
+    **Tactic** = המטרה (WHY) — Initial Access, Persistence, Lateral Movement, Exfiltration. **Technique** = הדרך (HOW) — Phishing (T1566), DLL Side-Loading (T1574.002). **Sub-technique** = וריאציה ספציפית. Tactic = שלב בattack chain, Technique = פעולה ספציפית.
+
+??? tip "מה Cyber Kill Chain ומה הקשר ל-ATT&CK?"
+    **Kill Chain** (Lockheed Martin) — 7 שלבים: Reconnaissance → Weaponization → Delivery → Exploitation → Installation → C2 → Actions on Objectives. ATT&CK מפורט יותר (14 tactics, מאות techniques). Kill Chain = linear; ATT&CK = matrix (תוקף יכול לקפוץ).
+
+??? tip "איך משתמשים ב-ATT&CK ל-Detection?"
+    1. Map existing detections לtechniques (ATT&CK Navigator). 2. זהה gaps — techniques ללא detection. 3. כתוב detection rules (Sigma/SIEM). 4. Test עם Atomic Red Team / Purple Team. 5. Iterate — improve coverage. Detection = measurable ב-ATT&CK.
+
+??? tip "מה IOC ומה TTP?"
+    **IOC** (Indicator of Compromise) — artifacts: IP, hash, domain. קצר חיים — תוקף משנה.
+    **TTP** (Tactics, Techniques, Procedures) — behavior patterns. יציב יותר — תוקף קשה לו לשנות behavior.
+    "Pyramid of Pain" — TTPs בראש (הכי קשה לתוקף לשנות, הכי ערך ל-defender).

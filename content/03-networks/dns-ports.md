@@ -180,3 +180,53 @@ lsof -i -P -n | grep LISTEN
 - [TCP/IP & HTTP](tcp-ip-http.md) -- DNS עובד מעל UDP (Port 53), וה-Ports הם חלק מ-Transport Layer (TCP/UDP).
 - [למה ל-Backend צריך רשתות](why-backend-needs-networking.md) -- שירותי Backend מתקשרים דרך DNS ו-Ports, במיוחד בסביבות Microservices.
 - [Docker](../04-systems/docker.md) -- ב-Docker, Port Mapping (`-p 8080:3000`) הוא מושג קריטי. DNS פנימי מאפשר ל-Containers למצוא אחד את השני.
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - רשתות מחשבים — DNS, TCP/UDP, ports, sockets
+    - מערכות הפעלה — processes, file descriptors, networking stack
+    - אבטחת מידע — DNS spoofing, port scanning, firewalls
+
+    **קורסים מומלצים:**
+    - מערכות מבוזרות — service discovery, load balancing
+    - DevOps/SRE — DNS management, CDN configuration
+    - פרוטוקולי אינטרנט — HTTP/2, gRPC, WebSocket
+
+    **ידע מעשי:**
+    - `dig`, `nslookup`, `host` — DNS debugging
+    - `netstat`, `ss`, `lsof` — port monitoring
+    - Wireshark — network packet analysis
+    - DNS providers (Route53, Cloudflare)
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **nslookup / dig** — תתחילו לחקור DNS records
+2. **"Computer Networking: A Top-Down Approach"** — Kurose & Ross
+3. **TryHackMe — Networking rooms** — תרגול אינטראקטיבי
+4. **Wireshark** — תראו DNS queries בזמן אמת
+5. **Set up a local DNS** — Pi-hole או Unbound
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה DNS ואיך Resolution עובד?"
+    **DNS** = Domain Name System — תרגום domain names ל-IP addresses. Resolution: Browser cache → OS cache → Recursive resolver → Root server → TLD server (.com) → Authoritative server → IP address. כל שלב יכול להחזיר cached response (TTL).
+
+??? tip "מה ההבדל בין TCP ל-UDP port?"
+    הport זהה (מספר 0-65535), אבל **TCP port** = connection-oriented (handshake, reliable). **UDP port** = connectionless (fire-and-forget, fast). TCP 80/443 = HTTP/HTTPS. UDP 53 = DNS. UDP 443 = QUIC/HTTP3. אפשר TCP ו-UDP על אותו port number.
+
+??? tip "מה A, AAAA, CNAME, MX, TXT records?"
+    **A** — domain → IPv4. **AAAA** — domain → IPv6. **CNAME** — alias (blog.example.com → example.com). **MX** — mail server. **TXT** — metadata (SPF, DKIM, domain verification). **NS** — nameserver delegation. **SOA** — zone authority.
+
+??? tip "מה Well-Known Ports ואיך בוחרים port?"
+    **0-1023** — well-known (HTTP=80, HTTPS=443, SSH=22, DNS=53). **1024-49151** — registered. **49152-65535** — dynamic/ephemeral. Best practice: אפליקציה custom על port > 1024, firewall חוסם הכל חוץ ממה שצריך.
+
+??? tip "מה DNS Caching ולמה TTL חשוב?"
+    DNS responses נשמרים ב-cache (browser, OS, resolver) לפי **TTL** (Time To Live). TTL נמוך = עדכונים מהירים, יותר queries. TTL גבוה = פחות queries, עדכונים איטיים. בmigration → מורידים TTL מראש. CDNs כמו Cloudflare משתמשים ב-TTL אגרסיבי.

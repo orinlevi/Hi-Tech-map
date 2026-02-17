@@ -205,3 +205,60 @@ print(f"Predicted digit: {predicted_digit}")
 - [Transformers](transformers.md) -- הארכיטקטורה שהחליפה RNNs ושולטת ב-NLP ומעבר
 - [AI, ML, DL -- מה ההבדל?](../00-big-picture/ai-ml-dl.md) -- איפה Neural Networks נמצאים בתמונה הגדולה
 - [CPU vs GPU](../04-systems/cpu-vs-gpu.md) -- למה צריך GPU לאימון Neural Networks
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - חדו"א — נגזרות, Chain Rule, אינטגרלים
+    - אלגברה לינארית — מטריצות, transformations, eigenvalues
+    - הסתברות וסטטיסטיקה — distributions, MLE, Bayesian
+    - למידת מכונה — regression, classification, optimization
+    - למידה עמוקה — architectures, training, regularization
+
+    **קורסים מומלצים:**
+    - אופטימיזציה — convex optimization, SGD variants
+    - תורת המידע — cross-entropy, KL divergence
+    - נוירומדע חישובי — biological neural networks
+
+    **ידע מעשי:**
+    - Python + NumPy — מימוש מאפס
+    - PyTorch / TensorFlow — frameworks
+    - Weights & Biases — experiment tracking
+    - GPU computing basics (CUDA)
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **3Blue1Brown — Neural Networks** — ויזואליזציה מעולה
+2. **Andrew Ng — Deep Learning Specialization** (Coursera)
+3. **CS231n** (Stanford) — CNNs ו-backprop
+4. **"Neural Networks from Scratch"** — Sentdex (YouTube)
+5. **Fast.ai** — practical deep learning
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה Backpropagation ואיך עובד?"
+    Backprop מחשב את הגרדיאנט של ה-Loss ביחס לכל משקל ברשת, באמצעות Chain Rule. Forward pass → חישוב loss → backward pass (סדר טופולוגי הפוך) → עדכון משקלים. יעיל כי O(n) ולא O(n²).
+
+??? tip "מה Vanishing / Exploding Gradients?"
+    **Vanishing** — gradients מתכווצים ל-0 בשכבות עמוקות (sigmoid/tanh). הפתרון: ReLU, ResNets, BatchNorm.
+    **Exploding** — gradients גדלים exponentially. הפתרון: gradient clipping, careful initialization (Xavier/He), BatchNorm.
+
+??? tip "מה Dropout ולמה עובד?"
+    Dropout מכבה נוירונים באקראי (probability p) בזמן אימון. מונע co-adaptation — כל נוירון חייב להיות שימושי בעצמו. בtest — כל הנוירונים פעילים, מוכפלים ב-(1-p). אפקט של ensemble — כל training step הוא sub-network אחר.
+
+??? tip "מה Batch Normalization?"
+    מנרמל את הoutput של כל שכבה ל-mean=0, std=1, ואז לומד γ ו-β (scale & shift). יתרונות: (1) אימון מהיר יותר, (2) מאפשר LR גבוה יותר, (3) מפחית sensitivity לinitialization, (4) אפקט regularization קל.
+
+??? tip "מה ההבדל בין ReLU ל-Sigmoid?"
+    **Sigmoid**: σ(x) = 1/(1+e^-x). Output [0,1]. בעיות: vanishing gradient, לא zero-centered, יקר לחישוב.
+    **ReLU**: max(0,x). Output [0,∞). יתרונות: אין vanishing gradient (לx>0), חישוב מהיר, sparse activation. חסרון: dying ReLU (x<0 → gradient=0). פתרונות: Leaky ReLU, ELU, GELU.
+
+??? tip "מה Regularization ולמה צריך?"
+    מניעת overfitting — המודל "שומע" את ה-train data ולא מכליל. שיטות: **L1** (sparsity), **L2/Weight Decay** (small weights), **Dropout**, **Early Stopping**, **Data Augmentation**, **BatchNorm**. בחירה: L2 הכי נפוץ, Dropout ב-FC layers, augmentation תמיד.

@@ -339,3 +339,55 @@ Status: All checks passed ✅
 - [Kubernetes](kubernetes.md) -- היעד של ה-deploy
 - [Production](../00-big-picture/production.md) -- מה זה production ולמה צריך pipeline כדי להגיע לשם
 - [מפת תפקידים](../00-big-picture/roles-map.md) -- DevOps / SRE הם האנשים שבונים ומתחזקים את ה-CI/CD
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - הנדסת תוכנה — SDLC, testing, version control
+    - מערכות הפעלה — scripting, automation
+    - רשתות — deployment, HTTP, DNS
+
+    **קורסים מומלצים:**
+    - DevOps Engineering — CI/CD pipelines, IaC
+    - אבטחת מידע — SAST, DAST, supply chain security
+    - Cloud Computing — AWS/GCP/Azure deployment
+
+    **ידע מעשי:**
+    - Git + GitHub Actions / GitLab CI
+    - Docker — containerization
+    - Terraform / Ansible — Infrastructure as Code
+    - Testing frameworks (Jest, pytest, etc.)
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **GitHub Actions docs** — בנו pipeline ראשון
+2. **"Continuous Delivery"** — Jez Humble & David Farley (ספר)
+3. **Docker Getting Started** — build + deploy container
+4. **GitLab CI/CD Tutorial** — אלטרנטיבה ל-GitHub Actions
+5. **Deploy to Vercel/Netlify** — CI/CD אוטומטי מ-Git
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין CI ל-CD?"
+    **CI (Continuous Integration)** — merge קוד לעיתים קרובות, build + tests אוטומטיים. מטרה: לגלות באגים מוקדם.
+    **CD (Continuous Delivery)** — כל commit שעובר CI מוכן ל-deploy (ידני).
+    **CD (Continuous Deployment)** — deploy אוטומטי לproduction. CI → CD(elivery) → CD(eployment) = continuum.
+
+??? tip "מה GitHub Actions ואיך עובד?"
+    Workflow-based CI/CD ב-GitHub. מוגדר ב-YAML (`.github/workflows/`). Triggers: push, PR, schedule, manual. Steps: checkout → setup → install → test → build → deploy. Runners: GitHub-hosted (Ubuntu/Windows/macOS) או self-hosted.
+
+??? tip "מה Blue-Green Deployment?"
+    שתי environments זהות: **Blue** (production נוכחי) ו-**Green** (version חדש). Deploy ל-Green → test → switch traffic. Rollback = switch back to Blue. יתרון: zero downtime, instant rollback. חסרון: כפול resources.
+
+??? tip "מה Canary Deployment?"
+    Deploy version חדש ל-אחוז קטן מהusers (5% → 10% → 50% → 100%). Monitor metrics (errors, latency). אם בעיה — rollback רק ל-canary group. יתרון: low risk. חסרון: מורכבות ב-routing ו-monitoring.
+
+??? tip "מה Pipeline Security (DevSecOps)?"
+    שילוב אבטחה ב-CI/CD: **SAST** — static code analysis (Semgrep, SonarQube). **DAST** — dynamic testing (OWASP ZAP). **SCA** — dependency scanning (Snyk, Dependabot). **Secret scanning** — GitHub/GitLab built-in. **Container scanning** — Trivy, Grype. Shift-left = אבטחה מוקדם יותר.

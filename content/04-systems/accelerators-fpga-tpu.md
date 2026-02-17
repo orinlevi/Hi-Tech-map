@@ -166,3 +166,55 @@ TPU משתלם כשמנצלים את כל ה-throughput שלו
 - [CPU מול GPU](cpu-vs-gpu.md) -- ההבדל הבסיסי בין CPU ל-GPU
 - [יסודות חומרה](hardware-basics.md) -- הרכיבים הבסיסיים של מחשב
 - [רשתות נוירונים](../02-ml-core/neural-networks.md) -- למה צריך את כל המאיצים האלה
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - ארכיטקטורת מחשבים — CPU pipeline, memory hierarchy, SIMD
+    - מעגלים דיגיטליים — logic gates, FPGA basics
+    - מערכות הפעלה — device drivers, DMA
+
+    **קורסים מומלצים:**
+    - VLSI Design — chip design, ASIC flow
+    - High Performance Computing — parallel architectures
+    - Hardware for ML — TPU, Cerebras, Graphcore
+
+    **ידע מעשי:**
+    - Verilog / VHDL — FPGA programming
+    - CUDA / OpenCL — GPU/accelerator programming
+    - TensorFlow (TPU support) / JAX
+    - Cloud accelerators (AWS Inferentia, Google TPU)
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Google Cloud TPU docs** — ניסוי חינמי עם Colab TPU
+2. **Xilinx / Intel FPGA tutorials** — getting started with FPGAs
+3. **"Computer Architecture" — Patterson & Hennessy** — ספר קלאסי
+4. **Google Edge TPU** — on-device inference
+5. **MLPerf benchmarks** — השוואת accelerators
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין GPU, FPGA ו-TPU?"
+    **GPU** — אלפי cores פשוטים, flexible, CUDA ecosystem. טוב לtraining ולinference.
+    **FPGA** — חומרה ניתנת לתכנות, latency נמוך מאוד, energy efficient. טוב לinference ב-edge.
+    **TPU** — ASIC ייעודי ל-matrix multiplication (Google). Systolic array, optimized for TensorFlow. טוב לtraining בscale גדול.
+
+??? tip "מה Systolic Array?"
+    ארכיטקטורת חישוב שבה data "זורם" דרך grid של PEs (Processing Elements). כל PE מבצע MAC (multiply-accumulate) ומעביר לשכן. מאוד יעיל ל-matrix multiplication — הבסיס של neural networks. TPU משתמש ב-systolic array של 128×128.
+
+??? tip "מתי כדאי FPGA על פני GPU?"
+    **FPGA עדיף**: latency קריטי (real-time), power constrained (edge/IoT), custom data types (INT4, custom precision), small batch inference. **GPU עדיף**: training, large batches, ecosystem/tooling חשוב, rapid prototyping. FPGA = יותר עבודת פיתוח, פחות flexible.
+
+??? tip "מה Mixed Precision Training?"
+    שימוש ב-FP16/BF16 במקום FP32 לחלק מהחישובים. יתרונות: 2x throughput, חצי memory. FP32 נשמר ל-master weights ול-loss scaling. NVIDIA Tensor Cores מיועדים בדיוק לזה. BF16 (Brain Float) — exponent כמו FP32, mantissa קצרה — פשוט יותר מ-FP16.
+
+??? tip "מה Inference Optimization?"
+    טכניקות להאצת inference: **Quantization** (FP32→INT8 — 4x speedup), **Pruning** (הסרת weights קטנים), **Knowledge Distillation** (מודל קטן שלומד ממודל גדול), **TensorRT** (NVIDIA optimizer), **ONNX Runtime** (cross-platform). Trade-off: speed vs accuracy.

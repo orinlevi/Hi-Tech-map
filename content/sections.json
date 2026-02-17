@@ -92,6 +92,96 @@
         { "slug": "queries-and-indexes", "file": "06-data/queries-and-indexes.md", "title": "שאילתות ואינדקסים" },
         { "slug": "db-and-ml", "file": "06-data/db-and-ml.md", "title": "Databases ו-ML" }
       ]
+    },
+    {
+      "id": "07-fullstack",
+      "title": "Full-Stack Development",
+      "emoji": "🌐",
+      "color": "indigo",
+      "units": [
+        { "slug": "html-css-basics", "file": "07-fullstack/html-css-basics.md", "title": "HTML & CSS — היסודות" },
+        { "slug": "javascript-fundamentals", "file": "07-fullstack/javascript-fundamentals.md", "title": "JavaScript — מהבסיס" },
+        { "slug": "typescript", "file": "07-fullstack/typescript.md", "title": "TypeScript" },
+        { "slug": "react-basics", "file": "07-fullstack/react-basics.md", "title": "React — קומפוננטות ו-Hooks" },
+        { "slug": "nextjs", "file": "07-fullstack/nextjs.md", "title": "Next.js" },
+        { "slug": "nodejs-express", "file": "07-fullstack/nodejs-express.md", "title": "Node.js & Express" },
+        { "slug": "rest-api-design", "file": "07-fullstack/rest-api-design.md", "title": "REST API Design" },
+        { "slug": "graphql", "file": "07-fullstack/graphql.md", "title": "GraphQL" },
+        { "slug": "authentication-flows", "file": "07-fullstack/authentication-flows.md", "title": "Authentication Flows" },
+        { "slug": "testing", "file": "07-fullstack/testing.md", "title": "בדיקות — Unit, Integration, E2E" }
+      ]
+    },
+    {
+      "id": "08-offensive-security",
+      "title": "Offensive Security",
+      "emoji": "⚔️",
+      "color": "red",
+      "units": [
+        { "slug": "owasp-top-10", "file": "08-offensive-security/owasp-top-10.md", "title": "OWASP Top 10" },
+        { "slug": "web-vulnerabilities", "file": "08-offensive-security/web-vulnerabilities.md", "title": "חולשות Web" },
+        { "slug": "reverse-engineering", "file": "08-offensive-security/reverse-engineering.md", "title": "Reverse Engineering" },
+        { "slug": "binary-exploitation", "file": "08-offensive-security/binary-exploitation.md", "title": "Binary Exploitation" },
+        { "slug": "network-attacks", "file": "08-offensive-security/network-attacks.md", "title": "התקפות רשת" },
+        { "slug": "privilege-escalation", "file": "08-offensive-security/privilege-escalation.md", "title": "Privilege Escalation" },
+        { "slug": "ctf-guide", "file": "08-offensive-security/ctf-guide.md", "title": "מדריך CTF" }
+      ]
+    },
+    {
+      "id": "09-cloud-devops",
+      "title": "Cloud & DevOps",
+      "emoji": "☁️",
+      "color": "sky",
+      "units": [
+        { "slug": "cloud-fundamentals", "file": "09-cloud-devops/cloud-fundamentals.md", "title": "Cloud — מבוא" },
+        { "slug": "iac-terraform", "file": "09-cloud-devops/iac-terraform.md", "title": "Terraform — IaC" },
+        { "slug": "monitoring-observability", "file": "09-cloud-devops/monitoring-observability.md", "title": "Monitoring & Observability" },
+        { "slug": "linux-essentials", "file": "09-cloud-devops/linux-essentials.md", "title": "Linux — שורת הפקודה" },
+        { "slug": "networking-for-devops", "file": "09-cloud-devops/networking-for-devops.md", "title": "רשתות ל-DevOps" },
+        { "slug": "gitops", "file": "09-cloud-devops/gitops.md", "title": "GitOps" }
+      ]
+    },
+    {
+      "id": "10-career",
+      "title": "קריירה בהייטק",
+      "emoji": "🚀",
+      "color": "pink",
+      "units": [
+        { "slug": "how-to-start", "file": "10-career/how-to-start.md", "title": "מאיפה מתחילים" },
+        { "slug": "resume-and-portfolio", "file": "10-career/resume-and-portfolio.md", "title": "קו\"ח ופורטפוליו" },
+        { "slug": "interview-prep", "file": "10-career/interview-prep.md", "title": "הכנה לראיון" },
+        { "slug": "system-design-basics", "file": "10-career/system-design-basics.md", "title": "System Design — מבוא" },
+        { "slug": "coding-interview", "file": "10-career/coding-interview.md", "title": "ראיון קוד" },
+        { "slug": "first-job", "file": "10-career/first-job.md", "title": "העבודה הראשונה" },
+        { "slug": "learning-roadmap", "file": "10-career/learning-roadmap.md", "title": "מפת דרכים ללימוד" }
+      ]
+    },
+    {
+      "id": "11-ml-redteam",
+      "title": "ML + Red Team",
+      "emoji": "🤖",
+      "color": "red",
+      "units": [
+        { "slug": "ml-for-offensive", "file": "11-ml-redteam/ml-for-offensive.md", "title": "ML כנשק התקפי" },
+        { "slug": "adversarial-ml", "file": "11-ml-redteam/adversarial-ml.md", "title": "Adversarial ML" },
+        { "slug": "automated-pentesting", "file": "11-ml-redteam/automated-pentesting.md", "title": "Automated Pentesting" },
+        { "slug": "malware-detection", "file": "11-ml-redteam/malware-detection.md", "title": "זיהוי Malware" },
+        { "slug": "threat-intelligence", "file": "11-ml-redteam/threat-intelligence.md", "title": "Threat Intelligence עם ML" },
+        { "slug": "ai-vs-ai-future", "file": "11-ml-redteam/ai-vs-ai-future.md", "title": "עתיד — AI vs AI" }
+      ]
+    },
+    {
+      "id": "12-neuro-ai",
+      "title": "נוירומדע ו-AI",
+      "emoji": "🧬",
+      "color": "emerald",
+      "units": [
+        { "slug": "brain-inspired-computing", "file": "12-neuro-ai/brain-inspired-computing.md", "title": "מהמוח למכונה" },
+        { "slug": "computational-neuroscience", "file": "12-neuro-ai/computational-neuroscience.md", "title": "Computational Neuroscience" },
+        { "slug": "neural-encoding-decoding", "file": "12-neuro-ai/neural-encoding-decoding.md", "title": "Neural Encoding & Decoding" },
+        { "slug": "vision-and-cnns", "file": "12-neuro-ai/vision-and-cnns.md", "title": "ראייה — מ-V1 עד CNNs" },
+        { "slug": "language-and-llms", "file": "12-neuro-ai/language-and-llms.md", "title": "שפה — מ-Broca עד GPT" },
+        { "slug": "learning-memory-plasticity", "file": "12-neuro-ai/learning-memory-plasticity.md", "title": "למידה, זיכרון ופלסטיות" }
+      ]
     }
   ]
 }

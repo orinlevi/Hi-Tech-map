@@ -220,3 +220,57 @@ SELECT * FROM logs WHERE user_id = 42;
 - [Relational מול NoSQL](relational-vs-nosql.md) — שאילתות נראות שונה מאוד בכל סוג Database
 - [DB ו-ML](db-and-ml.md) — שליפת נתוני אימון ושימוש ב-Vector Search
 - [סיבוכיות (Complexity)](../01-algorithmics/complexity.md) — O(n) לעומת O(log n) — זה בדיוק ההבדל בין Full Scan ל-Index Lookup
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מסדי נתונים — SQL, relational algebra, query processing
+    - מבני נתונים — B-trees, hash tables, sorted arrays
+    - אלגוריתמים — searching, sorting, complexity analysis
+
+    **קורסים מומלצים:**
+    - Database Internals — storage engines, query optimizers
+    - Big Data — distributed queries (Spark SQL, Presto)
+    - Performance Engineering — profiling, benchmarking
+
+    **ידע מעשי:**
+    - SQL — complex queries, window functions, CTEs
+    - EXPLAIN / EXPLAIN ANALYZE — query plans
+    - PostgreSQL / MySQL — index types, configuration
+    - pgAdmin / DataGrip — DB management tools
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **SQLBolt** — interactive SQL tutorial
+2. **"Use The Index, Luke"** — indexing tutorial (use-the-index-luke.com)
+3. **PostgreSQL documentation** — excellent and comprehensive
+4. **LeetCode SQL** — practice queries
+5. **EXPLAIN ANALYZE** — run on your own queries
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה Index ולמה הוא מאיץ queries?"
+    **Index** = מבנה נתונים (בד"כ B-Tree) שמאפשר חיפוש מהיר. בלי index: Full Table Scan O(n). עם index: O(log n). כמו אינדקס בסוף ספר — במקום לקרוא כל עמוד, מחפשים במפתח. Trade-off: מאיץ SELECT, מאט INSERT/UPDATE.
+
+??? tip "מה ההבדל בין B-Tree ל-Hash Index?"
+    **B-Tree** — sorted, supports range queries (>, <, BETWEEN), prefix matching. Default בPostgreSQL/MySQL. O(log n).
+    **Hash** — equality only (=). O(1) average. לא תומך ב-range. PostgreSQL: Hash index רק ל-equality, B-Tree preferred.
+
+??? tip "מה Composite Index ומה הסדר חשוב?"
+    **Composite Index** — index על מספר columns: `CREATE INDEX idx ON t(a, b, c)`. **Left prefix rule**: Index משמש רק אם Query כולל prefix: (a), (a,b), (a,b,c). לא (b,c) בלבד. סדר = לפי selectivity (unique first) ו-query patterns.
+
+??? tip "מה EXPLAIN ANALYZE?"
+    פקודה שמראה את ה-**query execution plan** — איך DB מבצע query: Seq Scan vs Index Scan, Join method (Hash, Merge, Nested Loop), estimated vs actual rows, time per step. `EXPLAIN ANALYZE SELECT ...`. הכלי הכי חשוב ל-query optimization.
+
+??? tip "מה N+1 Query Problem?"
+    `SELECT * FROM orders` → loop: `SELECT * FROM products WHERE id = ?` (per order). N orders = N+1 queries. פתרון: **JOIN** (`SELECT ... FROM orders JOIN products`) או **IN clause** (`WHERE id IN (...)`). ORM (Django, Rails) — use `select_related` / `includes`.
+
+??? tip "מה Window Functions?"
+    פונקציות שמחשבות על "חלון" של rows ללא GROUP BY: `ROW_NUMBER()`, `RANK()`, `LAG()/LEAD()`, `SUM() OVER()`. דוגמה: `SELECT name, salary, RANK() OVER (PARTITION BY dept ORDER BY salary DESC)`. חזקות ל-analytics, deduplication, running totals.

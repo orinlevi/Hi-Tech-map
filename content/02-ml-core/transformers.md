@@ -199,3 +199,60 @@ print(np.round(output, 2))
 - [רשתות נוירונים](neural-networks.md) -- Transformer מורכב מ-Feed-Forward layers, Activations, ועקרונות NN
 - [Diffusion](diffusion.md) -- Diffusion Transformers (DiT) משלבים Transformers ביצירת תמונות
 - [וקטורים ומרחבים](vectors-and-spaces.md) -- Embeddings ו-Attention עובדים על וקטורים במרחבים רב-ממדיים
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - אלגברה לינארית — matrix multiplication, attention as matmul
+    - למידה עמוקה — sequence models, attention mechanisms
+    - עיבוד שפה טבעית (NLP) — tokenization, language models
+    - הסתברות — softmax, cross-entropy, sampling
+
+    **קורסים מומלצים:**
+    - תורת המידע — information bottleneck, compression
+    - חישוב מבוזר — model parallelism, distributed training
+    - בלשנות חישובית — syntax, semantics, pragmatics
+
+    **ידע מעשי:**
+    - Python + PyTorch
+    - HuggingFace Transformers library
+    - tokenization (BPE, SentencePiece)
+    - Fine-tuning, LoRA, PEFT
+    - Prompt engineering
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **"Illustrated Transformer"** — Jay Alammar's blog
+2. **"Attention Is All You Need"** — Vaswani et al. (2017) — הpaper המקורי
+3. **CS224N** (Stanford) — NLP with Deep Learning
+4. **HuggingFace Course** — practical Transformers
+5. **Andrej Karpathy — "Let's build GPT"** (YouTube)
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה Self-Attention ולמה הוא חשוב?"
+    Self-Attention מאפשר לכל token "להסתכל" על כל הtokens האחרים ולחשב weighted sum. `Attention(Q,K,V) = softmax(QK^T/√d_k)V`. חשוב כי: (1) global context מהשכבה הראשונה (לא כמו RNN), (2) parallelizable (לא sequential), (3) לומד relationships ישירות.
+
+??? tip "למה מחלקים ב-√d_k?"
+    בלי scaling, כש-d_k גדול, dot products גדלים → softmax נהיה peaked (קרוב ל-one-hot) → gradients קטנים. חלוקה ב-√d_k מנרמלת את הvariance ל-1, שומרת על softmax "רך" עם gradients בריאים.
+
+??? tip "מה ההבדל בין Encoder ל-Decoder?"
+    **Encoder** (BERT) — bidirectional self-attention, רואה את כל הsequence. טוב להבנה (classification, NER).
+    **Decoder** (GPT) — causal self-attention (masked), רואה רק tokens קודמים. טוב ליצירה (text generation).
+    **Enc-Dec** (T5) — encoder מעבד input, decoder מייצר output עם cross-attention.
+
+??? tip "מה Positional Encoding ולמה צריך?"
+    Transformer לא יודע סדר — attention הוא permutation invariant. Positional encoding מוסיף מידע על מיקום: sinusoidal (original), learned (BERT), RoPE (LLaMA), ALiBi (BLOOM). RoPE ו-ALiBi מאפשרים extrapolation לsequences ארוכים יותר.
+
+??? tip "מה Multi-Head Attention?"
+    במקום attention אחד, מריצים h attention heads במקביל, כל אחד עם W_Q, W_K, W_V שונים. כל head לומד relationship שונה (syntax, coreference, position). Concatenate + linear projection. d_k = d_model / h → אותה עלות חישובית.
+
+??? tip "מה KV-Cache ולמה חשוב?"
+    באינפרנס autoregressive, כל token חדש צריך attention על כל הtokens הקודמים. בלי cache — מחשבים K,V מחדש בכל צעד: O(n²). עם KV-Cache — שומרים K,V של tokens קודמים ומוסיפים רק token חדש: O(n) per step. חיסכון ענק בזיכרון ובחישוב.

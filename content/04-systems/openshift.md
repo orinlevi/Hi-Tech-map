@@ -245,3 +245,53 @@ curl http://flask-app-my-web-project.apps.cluster.com
 - [Kubernetes](kubernetes.md) -- הבסיס שעליו OpenShift בנוי
 - [Docker](docker.md) -- איך בונים את ה-containers ש-OpenShift מריץ
 - [CI/CD](ci-cd.md) -- BuildConfig של OpenShift הוא חלק מ-CI/CD
+
+---
+
+## 📚 לימוד אקדמי
+
+!!! tip "מה ללמוד באקדמיה"
+    **קורסים חובה:**
+    - מערכות מבוזרות — container orchestration
+    - רשתות מחשבים — SDN, service mesh
+    - אבטחת מידע — RBAC, SCCs, enterprise security
+
+    **קורסים מומלצים:**
+    - Cloud Computing — hybrid/multi-cloud
+    - DevOps Engineering — CI/CD, GitOps
+    - Linux Administration — RHEL, systemd, SELinux
+
+    **ידע מעשי:**
+    - oc CLI (OpenShift client)
+    - Kubernetes (OpenShift = K8s++)
+    - Red Hat Developer Sandbox — free OpenShift
+    - Helm + Operators
+
+---
+
+## 🛤️ מאיפה מתחילים
+
+1. **Red Hat Developer Sandbox** — free OpenShift cluster
+2. **oc CLI** — learn the OpenShift command line
+3. **"OpenShift in Action"** — Manning (ספר)
+4. **Red Hat DO180** — Containers & Kubernetes course
+5. **CKA + OpenShift certification** — career boost
+
+---
+
+## 💼 שאלות לראיון עבודה
+
+??? tip "מה ההבדל בין OpenShift ל-Kubernetes?"
+    **OpenShift = K8s + enterprise features**: built-in CI/CD (Tekton), image registry, developer console (web UI), Routes (simpler than Ingress), stricter security (SCCs), Operators ecosystem, Red Hat support. K8s = engine, OpenShift = car.
+
+??? tip "מה Route ב-OpenShift?"
+    **Route** = OpenShift's way to expose services externally. דומה ל-Ingress אבל פשוט יותר: `oc expose svc/my-service`. Auto TLS, edge/passthrough/reencrypt termination. HAProxy-based router.
+
+??? tip "מה Security Context Constraints (SCCs)?"
+    **SCC** = OpenShift security policy שמגבילה מה Pod יכול לעשות. Default: `restricted` — no root, no host networking, no privileged containers. הרבה יותר strict מ-vanilla K8s. צריך `oc adm policy` כדי לתת הרשאות מורחבות.
+
+??? tip "מה Operators?"
+    **Operator** = custom controller שמנהל application lifecycle ב-K8s/OpenShift. CRDs (Custom Resource Definitions) + controller logic. דוגמה: PostgreSQL Operator — יוצר, מגבה, ומשדרג DB clusters אוטומטית. OperatorHub = marketplace.
+
+??? tip "מתי בוחרים OpenShift על פני vanilla K8s?"
+    **OpenShift**: enterprise environment, compliance requirements (SOC2, HIPAA), Red Hat ecosystem, need for support SLA, integrated developer experience. **Vanilla K8s**: flexibility, lower cost, cloud-native (EKS/GKE), startup/small team, specific customization needs.
