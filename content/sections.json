@@ -137,7 +137,8 @@
         { "slug": "monitoring-observability", "file": "09-cloud-devops/monitoring-observability.md", "title": "Monitoring & Observability" },
         { "slug": "linux-essentials", "file": "09-cloud-devops/linux-essentials.md", "title": "Linux — שורת הפקודה" },
         { "slug": "networking-for-devops", "file": "09-cloud-devops/networking-for-devops.md", "title": "רשתות ל-DevOps" },
-        { "slug": "gitops", "file": "09-cloud-devops/gitops.md", "title": "GitOps" }
+        { "slug": "gitops", "file": "09-cloud-devops/gitops.md", "title": "GitOps" },
+        { "slug": "git-worktrees-parallel-work", "file": "09-cloud-devops/git-worktrees-parallel-work.md", "title": "Git Worktrees — עבודה מקבילה" }
       ]
     },
     {
